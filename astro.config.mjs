@@ -7,7 +7,6 @@ import { visit } from "unist-util-visit";
 
 function remarkSectionPlugin() {
   return function (tree) {
-    console.log("tree", tree);
     visit(tree, function (node) {
       if (
         node.type === "containerDirective" ||
