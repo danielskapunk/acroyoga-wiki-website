@@ -1,14 +1,16 @@
 ---
+import { getCollection } from 'astro:content';
 import MosaicItem from '../components/MosaicItem.astro';
-import birdImg from '../images/bird-acroyoga_10a960c0fc.png';
 import Layout from '../layouts/Layout.astro';
+const allAcro = await getCollection('acro');
+// console.log('allAcro', allAcro)
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="grid grid-cols-3 gap-x-5">
-		<MosaicItem title='Bird' level="easy" p="/" img={birdImg} />
-		<MosaicItem title='Bird' level="easy" p="/" img={birdImg} />
-		<MosaicItem title='Bird' level="easy" p="/" img={birdImg} />
+		{allAcro.map(a=>( 
+			<MosaicItem title={a.data.name} level={a.data.level} p="/" img={a.data.image} />
+		))}
 	</main>
 </Layout>
 

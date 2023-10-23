@@ -1,9 +1,9 @@
 ---
 # layout: ../../layouts/Trick.astro
-name: Back Bird
-aka: [palomita de espalda]
+name: Bat
+aka: [Vampirito]
 level: easy
-image: "../../images/acro-back-bird.jpeg"
+image: "../../images/acroyoga-bat.jpeg"
 video: "https://youtu.be/qa5iG6k3W0s"
 tags: []
 to:
