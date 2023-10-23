@@ -5,7 +5,13 @@ export default {
     fontFamily: {
       display: ["Montserrat"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        slate: {
+          350: "#a0b0c7",
+        },
+      },
+    },
   },
   plugins: [],
 };

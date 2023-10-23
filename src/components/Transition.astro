@@ -1,0 +1,18 @@
+---
+import { Icon } from 'astro-icon';
+const { data, from } = Astro.props;
+console.log('data', data)
+// const arrow = (b:boolean)=>{
+// 	return b ? <FaLongArrowAltLeft class='fa-icon' /> : <FaLongArrowAltRight class='fa-icon' /> 
+// }
+---
+<ul>
+	{data.map((d) => 
+	<li class="grid grid-cols-[auto_60px_1fr_65px] ">
+		<div>{from}</div>
+		<div class="flex justify-center"> <Icon name="fa:arrow-left" class={`w-2 ${d.canGoBack?"":"invisible"}`} /> <Icon name="fa:arrow-right" class="w-2" /> </div>
+		<a href={`/acro/${d.pose}`}>{d.pose}</a>
+		<a href={d.video}>video</a> 
+	</li>
+	)}
+</ul>

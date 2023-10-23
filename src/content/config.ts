@@ -13,6 +13,13 @@ const acroCollection = defineCollection({
       image: image().refine((img) => img.width >= 600, {
         message: "Cover image must be at least 1080 pixels wide!",
       }),
+      to: z.array(
+        z.object({
+          pose: z.string(),
+          video: z.string(),
+          canGoBack: z.boolean(),
+        })
+      ),
       tags: z.array(z.string()),
       numPeople: z.enum(["two", "three", "more"]),
     }),

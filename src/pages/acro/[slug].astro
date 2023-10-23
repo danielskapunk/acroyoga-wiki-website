@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import Transition from '../../components/Transition.astro';
+import Layout from '../../layouts/Layout.astro';
+
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const acroEntries = await getCollection('acro');
@@ -14,33 +17,60 @@ const { Content } = await entry.render()
 console.log('entry', Astro.props)
 
 ---
-<style>/* Register your custom font family and tell the browser where to find it. */
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}</style>
+<Layout title={entry.data.name}>
+    <article class="bg-gray-300 max-w-5xl my-0 mx-auto pb-4">
+        <h3 class="text-center font-display text-3xl font-bold" >{entry.data.name}</h3>
 
-<article class="grid bg-gray-300">
-    <h3 class="pt-4 pb-4 text-center font-display text-3xl font-bold" >{entry.data.name}</h3>
+        <Image class="object-cover h-96 w-full" src={entry.data.image} alt="trick image"/>
+        
+        <div class="grid text-gray-800">
+            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div class="">Nombre</div> <div>{entry.data.name}</div></div>
+            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 "> <div>Otros Nombres</div> <div>{entry.data.aka}</div></div>
+            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div>Dificultad</div> <div>{entry.data.level}</div></div>
+            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50"> <div>Num Personas</div> <div>{entry.data.numPeople}</div></div>
+        </div>
 
-    <Image class="object-cover h-96 w-full" src={entry.data.image} alt="trick image"/>
-    <!-- <slot /> -->
+        
+        <section class="pl-4 pr-4">
+            <h3>Transiciones</h3>   
+            <Transition from={entry.data.name} data={entry.data.to} />
 
-    <!-- <TwoColumnData2 class="info" data={infoArr} /> -->
+            <h3>Imagen - Video</h3>
+            <Image class="block max-h-96 mx-auto h-auto w-auto" src={entry.data.image} alt="trick image"/>
+            
+            <Content />
+        </section>
+    </article>
+</Layout>
 
-    <!-- <MarkdownContent
-      class="content"
-      content={frontmatter.content}
-    ></MarkdownContent> -->
-
-    <!-- {transitionsHtml} -->
-
-    <!-- <TagList class="tags" prefix={"/wiki-circo/tag"} tags={frontmatter.tags}>
-      Tags:{" "}
-    </TagList> -->
-    <Content />
-    <!-- <div class="date">{frontmatter.date}</div> -->
-  </article>
+<style is:global>
+    .variantes ul{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: rgb(0,0,0,78%);
+        padding: 30px 10px;
+        border-radius: 13px;
+    }
+    .variantes em{
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 10px;
+        background: rgba(255,255,255,40%);
+        padding: 2px 7px;
+    }
+    .variantes li{
+        width: 250px;
+        height: 250px;
+    }
+    .variantes li p{
+        height: 100%;
+    }
+    
+    .variantes img { 
+        object-fit: cover;
+        height: 100%;
+        vertical-align: middle;
+        border-radius: 5px;
+    }
+</style>
