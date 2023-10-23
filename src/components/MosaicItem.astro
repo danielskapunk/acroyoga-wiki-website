@@ -16,7 +16,7 @@ const { title, img, level, p } = Astro.props;
 	</h3>
 
 	<div class="col-span-2 order-first ">
-	  <a href={p}><Image src={img} alt='test'/></a>
+	  <a href={p}><Image class="object-cover h-64 w-full" src={img} alt='test'/></a>
 	</div>
 	<!-- <div class="wiki-item-type">
 	  <a href={`${prefix}/${post.skill}`}>{post.skill}</a>
