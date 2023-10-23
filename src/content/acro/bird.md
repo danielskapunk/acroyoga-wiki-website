@@ -1,45 +1,47 @@
 ---
 # layout: ../../layouts/Trick.astro
 name: Bird
-aka: [palomita de espalda]
+aka: [palomita, pajaro, pajarito]
 level: easy
-image: "../../images/acro-back-bird.jpeg"
+image: "../../images/bird-acroyoga_10a960c0fc.png"
 tags: []
 to:
-  - pose: throne
-    video: asdasd
+  - pose: flyer standing
+    video: https://www.youtube.com/watch?v=r6q8JxAUfh4&t=6s
     canGoBack: true
-  - pose: star
-    video: video2
-    canGoBack: false
+  - pose: Candelstick
+    video: https://www.youtube.com/watch?v=aXDDjqyc6ao
+    canGoBack: true
+  - pose: Side Star (no hands)
+    video: https://youtu.be/g6XH0ZO241c?t=10
+    canGoBack: true
+  - pose: Low Bird
+    video: https://www.youtube.com/watch?v=bGOsc7Fg3U8
+    canGoBack: true
+  - pose: (pop) Reverse Star
+    video: https://photos.app.goo.gl/jH5r6E9nLjRFxV3c7
+    canGoBack: true
+  - pose: (pop) Star
+    video: https://www.youtube.com/watch?v=ESTQVir4LbA&list=UUZkIAsA8JGmM4IiRSZm6kFw&index=112
+    canGoBack: true
 numPeople: two
 ---
 
-# Bird
+## Drills
 
-**Imagen - Video**
-{frontmatter.level}
+[no video](https://www.youtube.com/)
 
-**Ejercicios**
+## Variantes
 
-[super dave video](https://www.youtube.com/watch?v=qa5iG6k3W0s)
+- Palomita apoyando las dos manos
+- Palomita una mano
+- Palomita sin manos
+- Palomita un pie una mano
+  </br>
 
-**Entradas - Salidas**
+:::section{.variantes}
 
-- standing bird [video](https://youtu.be/qa5iG6k3W0s?t=36)
-- bird ← (pop) → [Reverse Bird](/wiki-circo/reverse-bird) [video](https://www.youtube.com/watch?v=UekRYMSAfmQ&list=PL1-kCAzj6UZ_MG_J7ElrDzlkHbeFokjXJ&index=22&t=0s)
+- [![one foot](../../images/bird-variation-one-foot-and-shin.jpg)](https://www.instagram.com/p/BunhHsqFBUI/?utm_source=ig_web_button_share_sheet)
+  _one foot, one foot on shin_
 
-**Variantes**
-
-- Bow pose
-  ![Untitled 1](../../images/Untitled_1_ea056f5828.png)
-
-- Dancers pose
-- ![Untitled 2](../../images/Untitled_2_d0ad508c21.png)
-
-- Back plank
-  ![Untitled 3](../../images/Untitled_3_01c49a0c1c.png)
-
-- Boat pose
-
-![Untitled 4](../../images/Untitled_4_b693ad3507.png)
+:::

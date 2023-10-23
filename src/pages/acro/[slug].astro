@@ -11,7 +11,6 @@ export async function getStaticPaths() {
     params: { slug: entry.slug }, props: { entry },
   }));
 }
-
 const { entry } = Astro.props
 const { Content } = await entry.render()
 
@@ -24,7 +23,7 @@ const { Content } = await entry.render()
         
         <div class="grid text-gray-800">
             <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div class="">Nombre</div> <div>{entry.data.name}</div></div>
-            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 "> <div>Otros Nombres</div> <div>{entry.data.aka}</div></div>
+            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 "> <div>Otros Nombres</div> <div>{entry.data.aka.join(", ")}</div></div>
             <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div>Dificultad</div> <div>{entry.data.level}</div></div>
             <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50"> <div>Num Personas</div> <div>{entry.data.numPeople}</div></div>
         </div>

@@ -7,29 +7,30 @@ image: "../../images/acro-back-bird.jpeg"
 video: "https://youtu.be/qa5iG6k3W0s"
 tags: []
 to:
-  - pose: Reverse Bird
-    video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
-    canGoBack: true
-  - pose: Bat
-    video: /
-    canGoBack: true
-  - pose: Star
-    video: /
+  - pose: Standing
+    video: https://youtu.be/qa5iG6k3W0s?t=36
     canGoBack: true
   - pose: Reverse Shoulder Stand
     video: https://youtu.be/KcMntJdIUGA?t=24
     canGoBack: true
+  - pose: Bat
+    video: /
+    canGoBack: true
+  - pose: Side Star
+    video: https://youtu.be/BW0e3TwUd3U?t=17
+    canGoBack: true
+  - pose: Reverse Bird
+    video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
+    canGoBack: true
+  - pose: (pop) Reverse Bird
+    video: https://youtu.be/UekRYMSAfmQ?list=PL1-kCAzj6UZ_MG_J7ElrDzlkHbeFokjXJ&t=11
+    canGoBack: false
 numPeople: two
 ---
 
 ## Drills
 
 [super dave video](https://www.youtube.com/watch?v=qa5iG6k3W0s)
-
-## Entries - Exits
-
-- standing ←→ back bird [video](https://youtu.be/qa5iG6k3W0s?t=36)
-- back bird ← (pop) → [Reverse Bird](/wiki-circo/reverse-bird) [video](https://www.youtube.com/watch?v=UekRYMSAfmQ&list=PL1-kCAzj6UZ_MG_J7ElrDzlkHbeFokjXJ&index=22&t=0s)
 
 :::section{.variantes}
 
