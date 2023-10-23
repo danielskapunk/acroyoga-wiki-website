@@ -3,13 +3,14 @@ import { getCollection } from 'astro:content';
 import MosaicItem from '../components/MosaicItem.astro';
 import Layout from '../layouts/Layout.astro';
 const allAcro = await getCollection('acro');
-// console.log('allAcro', allAcro)
+
+console.log('allAcro', allAcro)
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Acroyoga Wiki">
 	<main class="grid grid-cols-3 gap-x-5">
 		{allAcro.map(a=>( 
-			<MosaicItem title={a.data.name} level={a.data.level} p="/" img={a.data.image} />
+			<MosaicItem title={a.data.name} level={a.data.level} p={`/acro/${a.slug}`} img={a.data.image} numPeople={a.data.numPeople} />
 		))}
 	</main>
 </Layout>
