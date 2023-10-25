@@ -1,42 +1,44 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 interface Props {
-	title: string;
-	img: ImageMetadata;
-	level: string;
-	numPeople: string;
-	p: string
+  title: string;
+  img: ImageMetadata;
+  level: string;
+  numPeople: string;
+  p: string;
 }
 
 const { title, img, level, p, numPeople } = Astro.props;
 ---
 
-<article class="grid bg-zinc-900 grid-cols-2 grid-rows-[250px] items-center text-center m-0">
-	<h3 class="col-span-2 ">
-	  <a class="!text-white" href={p}>{title}</a>
-	</h3>
+<article
+  class="grid bg-zinc-900 grid-cols-2 grid-rows-[250px] items-center text-center m-0"
+>
+  <h3 class="col-span-2">
+    <a class="!text-white" href={p}>{title}</a>
+  </h3>
 
-	<div class="col-span-2 order-first ">
-	  <a href={p}><Image class="object-cover h-64 w-full" src={img} alt='test'/></a>
-	</div>
-	<!-- <div class="wiki-item-type">
+  <div class="col-span-2 order-first">
+    <a href={p}
+      ><Image class="object-cover h-64 w-full" src={img} alt="test" /></a
+    >
+  </div>
+  <!-- <div class="wiki-item-type">
 	  <a href={`${prefix}/${post.skill}`}>{post.skill}</a>
 	</div> -->
-	{/* <TagList class='tags2' prefix={''} tags={post.tags}></TagList> */}
-	<div class="wiki-item-level">
-	  <a href={`/`} class="!text-gray-500">
-		{level}
-	  </a>
-	</div>
+  {/* <TagList class='tags2' prefix={''} tags={post.tags}></TagList> */}
+  <div class="wiki-item-level">
+    <a href={`/`} class="!text-gray-500">
+      {level}
+    </a>
+  </div>
 
-	<div class="">
-		<a href={`/`} class="!text-gray-500">
-		  {numPeople}
-		</a>
-	  </div>
-  </article>
+  <div class="">
+    <a href={`/`} class="!text-gray-500">
+      {numPeople}
+    </a>
+  </div>
+</article>
 
-<style>
-
-</style>
+<style></style>
