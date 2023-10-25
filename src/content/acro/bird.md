@@ -3,7 +3,7 @@
 name: Bird
 aka: [palomita, pajaro, pajarito]
 level: easy
-image: "../../images/bird-acroyoga_10a960c0fc.png"
+image: '../images/bird-acroyoga.png'
 tags: []
 to:
   - pose: flyer standing
@@ -41,7 +41,7 @@ numPeople: two
 
 :::section{.variantes}
 
-- [![one foot](../../images/bird-variation-one-foot-and-shin.jpg)](https://www.instagram.com/p/BunhHsqFBUI/?utm_source=ig_web_button_share_sheet)
+- [![one foot](../images/bird-variation-one-foot-and-shin.jpg)](https://www.instagram.com/p/BunhHsqFBUI/?utm_source=ig_web_button_share_sheet)
   _one foot, one foot on shin_
 
 :::
