@@ -3,7 +3,7 @@
 name: Whale
 aka: [ballena]
 level: easy
-image: '../images/acroyoga-whale.jpeg'
+image: './images/acroyoga-whale.jpeg'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
 to:
@@ -30,7 +30,7 @@ no info yet.
 
 :::section{.variantes}
 
-- ![Untitled 1](../images/acroyoga-whale.jpeg)
+- ![Untitled 1](./images/acroyoga-whale.jpeg)
   _Bow pose_
 
 :::

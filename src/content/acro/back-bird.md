@@ -3,7 +3,7 @@
 name: Back Bird
 aka: [palomita de espalda]
 level: easy
-image: '../images/acro-back-bird.jpeg'
+image: './images/acro-back-bird.jpeg'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
 to:
@@ -36,16 +36,16 @@ numPeople: two
 
 ## Variantes
 
-- ![Bow Pose](../images/acro-back-bird-bow.png)
+- ![Bow Pose](./images/acro-back-bird-bow.png)
   _Bow pose_
 
-- ![Dancers pose](../images/acro-back-bird-dancers.png)
+- ![Dancers pose](./images/acro-back-bird-dancers.png)
   _Dancers pose_
 
-- ![Back Plank](../images/acro-back-bird-back-plank.png)
+- ![Back Plank](./images/acro-back-bird-back-plank.png)
   _Back plank_
 
-- ![Boat Pose](../images/acro-back-bird-boat.png)
+- ![Boat Pose](./images/acro-back-bird-boat.png)
   _Boat pose_
 
 :::

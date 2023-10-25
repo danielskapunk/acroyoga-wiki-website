@@ -3,7 +3,7 @@
 name: Bat
 aka: [Vampirito]
 level: easy
-image: '../images/acroyoga-bat.jpeg'
+image: './images/acroyoga-bat.jpeg'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
 to:
@@ -21,7 +21,7 @@ numPeople: two
 
 ## Variantes
 
-- ![simple bat](../images/acroyoga-bat.jpeg)
+- ![simple bat](./images/acroyoga-bat.jpeg)
   _Bow pose_
 
 :::
