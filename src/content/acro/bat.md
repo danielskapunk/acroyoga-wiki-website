@@ -4,7 +4,7 @@ name: Bat
 aka: [Vampirito]
 level: easy
 image: './images/acroyoga-bat.jpeg'
-video: 'https://youtu.be/qa5iG6k3W0s'
+video: mwETRw_OOXs
 tags: []
 to:
   - pose: Throne
@@ -15,13 +15,13 @@ numPeople: two
 
 ## Drills
 
-[super dave video](https://www.youtube.com/watch?v=qa5iG6k3W0s)
+- no drills yet
 
 :::section{.variantes}
 
 ## Variantes
 
-- ![simple bat](./images/acroyoga-bat.jpeg)
-  _Bow pose_
+- ![bat-flexed-legs](./images/acroyoga-bat.jpeg)
+  _Flexed Legs_
 
 :::

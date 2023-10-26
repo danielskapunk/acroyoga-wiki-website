@@ -1,74 +1,112 @@
 ---
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import Transition from '../../components/Transition.astro';
-import Layout from '../../layouts/Layout.astro';
+import { YouTube } from '@astro-community/astro-embed-youtube'
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+import Transition from '../../components/Transition.astro'
+import Layout from '../../layouts/Layout.astro'
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const acroEntries = await getCollection('acro');
-  return acroEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+	const acroEntries = await getCollection('acro')
+	return acroEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry }
+	}))
 }
 const { entry } = Astro.props
 const { Content } = await entry.render()
-
 ---
+
 <Layout title={entry.data.name}>
-    <article class="bg-gray-300 max-w-5xl my-0 mx-auto pb-4">
-        <h3 class="text-center font-display text-3xl font-bold" >{entry.data.name}</h3>
+	<article class="bg-gray-300 pb-4">
+		<h3 class="text-center font-display text-3xl font-bold">{entry.data.name}</h3>
 
-        <Image class="object-cover h-96 w-full" src={entry.data.image} alt="trick image"/>
-        
-        <div class="grid text-gray-800">
-            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div class="">Nombre</div> <div>{entry.data.name}</div></div>
-            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 "> <div>Otros Nombres</div> <div>{entry.data.aka.join(", ")}</div></div>
-            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90"> <div>Dificultad</div> <div>{entry.data.level}</div></div>
-            <div class="pl-4 py-1 grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50"> <div>Num Personas</div> <div>{entry.data.numPeople}</div></div>
-        </div>
+		<Image class="h-96 w-full object-cover" src={entry.data.image} alt="trick image" />
 
-        
-        <section class="pl-4 pr-4">
-            <h3>Transiciones</h3>   
-            <Transition from={entry.data.name} data={entry.data.to} />
+		<div class="grid text-gray-800">
+			<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90 py-1 pl-4">
+				<div class="">Nombre</div>
+				<div>{entry.data.name}</div>
+			</div>
+			<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 py-1 pl-4">
+				<div>Otros Nombres</div>
+				<div>{entry.data.aka.join(', ')}</div>
+			</div>
+			<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90 py-1 pl-4">
+				<div>Dificultad</div>
+				<div>{entry.data.level}</div>
+			</div>
+			<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 py-1 pl-4">
+				<div>Num Personas</div>
+				<div>{entry.data.numPeople}</div>
+			</div>
+		</div>
 
-            <h3>Imagen - Video</h3>
-            <Image class="block max-h-96 mx-auto h-auto w-auto" src={entry.data.image} alt="trick image"/>
-            
-            <Content />
-        </section>
-    </article>
+		<section class="pl-4 pr-4">
+			<h3>Transiciones</h3>
+			<Transition from={entry.data.name} data={entry.data.to} />
+
+			<h3>Imagen</h3>
+			<Image
+				class="mx-auto block h-auto max-h-96 w-auto"
+				src={entry.data.image}
+				alt="trick image"
+			/>
+
+			{
+				entry.data.video ? (
+					<>
+						<h3>Video</h3>
+						<YouTube class="mx-auto block h-auto max-h-96 w-auto" id={entry.data.video} />
+					</>
+				) : (
+					<section>No video</section>
+				)
+			}
+
+			<Content />
+		</section>
+	</article>
 </Layout>
 
 <style is:global>
-    .variantes ul{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background: rgb(0,0,0,78%);
-        padding: 30px 10px;
-        border-radius: 13px;
-    }
-    .variantes em{
-        position: absolute;
-        margin-top: -30px;
-        margin-left: 10px;
-        background: rgba(255,255,255,40%);
-        padding: 2px 7px;
-    }
-    .variantes li{
-        width: 250px;
-        height: 250px;
-    }
-    .variantes li p{
-        height: 100%;
-    }
-    
-    .variantes img { 
-        object-fit: cover;
-        height: 100%;
-        vertical-align: middle;
-        border-radius: 5px;
-    }
+	.variantes ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background: rgb(0, 0, 0, 78%);
+		padding: 30px 10px;
+		border-radius: 13px;
+	}
+	.variantes em {
+		position: absolute;
+		margin-top: -30px;
+		margin-left: 10px;
+		background: rgba(255, 255, 255, 40%);
+		padding: 2px 7px;
+	}
+	.variantes li {
+		width: 250px;
+		height: 250px;
+	}
+	.variantes li p {
+		height: 100%;
+	}
+
+	.variantes img {
+		object-fit: cover;
+		height: 100%;
+		vertical-align: middle;
+		border-radius: 5px;
+	}
+	html h1,
+	html h2,
+	html h3,
+	html h4 {
+		font-size: x-large;
+		margin-bottom: 1rem;
+		padding-top: 1rem;
+		/* font-family: Montserrat; */
+		font-weight: 700;
+	}
 </style>
