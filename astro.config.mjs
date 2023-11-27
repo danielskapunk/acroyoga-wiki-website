@@ -28,7 +28,7 @@ function remarkSectionPlugin() {
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://danielskapunk.github.io',
-	base: '/acroyoga-wiki-website',
+	// base: '/acroyoga-wiki-website',
 	// output: 'hybrid',
 	markdown: {
 		remarkPlugins: [remarkDirective, remarkSectionPlugin]
