@@ -1,5 +1,6 @@
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
+import pagefind from 'astro-pagefind'
 import { defineConfig } from 'astro/config'
 import { h } from 'hastscript'
 import remarkDirective from 'remark-directive'
@@ -26,8 +27,11 @@ function remarkSectionPlugin() {
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://danielskapunk.github.io',
+	base: '/acroyoga-wiki-website',
+	output: 'hybrid',
 	markdown: {
 		remarkPlugins: [remarkDirective, remarkSectionPlugin]
 	},
-	integrations: [mdx(), tailwind()]
+	integrations: [mdx(), tailwind(), pagefind()]
 })

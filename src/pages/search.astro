@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content'
+import Fuse from 'fuse.js'
+import Mosaic from '../components/Mosaic.astro'
+import Layout from '../layouts/Layout.astro'
+export const prerender = false
+
+// const allAcro = await getCollection('acro')
+const q = Astro.url.searchParams.get('q') ?? undefined
+const sposes = await getCollection(
+	'acro'
+	// , ({ data }) => {
+	// 	console.log('dat.name', data.name, q)
+	// 	return data.name.toLowerCase().indexOf(q || '') >= 0
+	// }
+)
+// console.log('SPOSES', sposes)
+const fuse = new Fuse(sposes, {
+	includeScore: true,
+	keys: ['data.name', 'data.aka']
+})
+const c = fuse.search('ird')
+console.log('FUZZY SEARCH RESULTS:', c)
+---
+
+<Layout title="Acroyoga Wiki">
+	<!-- <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} /> -->
+	<main>
+		<Mosaic items={[]} />
+	</main>
+</Layout>

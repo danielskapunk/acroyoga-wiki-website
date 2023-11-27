@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import MosaicItem from './MosaicItem.astro'
+
+// console.log('Astro.props', Astro.props, 'asdasd')
+const items = (Astro.props.items as CollectionEntry<'acro'>[]) || []
+---
+
+<section class="sm: grid grid-cols-2 gap-2 px-2 sm:grid-cols-3 sm:gap-5">
+	{
+		items.map((item) => (
+			<MosaicItem
+				title={item.data.name}
+				level={item.data.level}
+				p={`/acro/${item.slug}`}
+				img={item.data.image}
+				numPeople={item.data.numPeople}
+			/>
+		))
+	}
+</section>

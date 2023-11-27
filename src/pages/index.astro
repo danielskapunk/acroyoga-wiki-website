@@ -1,22 +1,16 @@
 ---
 import { getCollection } from 'astro:content'
-import MosaicItem from '../components/MosaicItem.astro'
+import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
 const allAcro = await getCollection('acro')
+export const prerender = false
+const q = Astro.url.searchParams.get('q') ?? undefined
+// console.log('q', q, Astro.url.searchParams, Astro.params)
 ---
 
 <Layout title="Acroyoga Wiki">
-	<main class="sm: grid grid-cols-2 gap-2 px-2 sm:grid-cols-3 sm:gap-5">
-		{
-			allAcro.map((a) => (
-				<MosaicItem
-					title={a.data.name}
-					level={a.data.level}
-					p={`/acro/${a.slug}`}
-					img={a.data.image}
-					numPeople={a.data.numPeople}
-				/>
-			))
-		}
+	<!-- <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} /> -->
+	<main>
+		<Mosaic items={allAcro} />
 	</main>
 </Layout>
