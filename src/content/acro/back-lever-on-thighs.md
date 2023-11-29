@@ -1,6 +1,6 @@
 ---
 name: Back Lever on Thighs
-aka: [asd]
+aka: []
 level: easy
 image: './images/back-lever-on-thighs.jpeg'
 video: 'https://youtu.be/6gTdwKPJGls?t=179'
