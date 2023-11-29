@@ -14,7 +14,7 @@ to:
     video: https://youtu.be/KcMntJdIUGA?t=24
     canGoBack: true
   - pose: Bat
-    video: /
+    video: ''
     canGoBack: true
   - pose: Side Star
     video: https://youtu.be/BW0e3TwUd3U?t=17

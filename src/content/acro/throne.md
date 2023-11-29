@@ -1,5 +1,4 @@
 ---
-# layout: ../../layouts/Trick.astro
 name: Throne
 aka: [Chair, Trono, Silla]
 level: easy

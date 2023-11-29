@@ -17,7 +17,7 @@ const { data, from } = Astro.props
 					<Icon name="fa:arrow-right" class="w-2" />{' '}
 				</div>
 				<a href={`/acro/${d.pose}`}>{d.pose}</a>
-				<a href={d.video}>video</a>
+				{d.video && <a href={d.video}>video</a>}
 			</li>
 		))
 	}
