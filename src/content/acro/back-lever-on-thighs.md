@@ -4,9 +4,10 @@ aka: []
 level: easy
 image: './images/back-lever-on-thighs.jpeg'
 video: 'https://youtu.be/6gTdwKPJGls?t=179'
-tags: []
+tags: [standing, dance-lifts]
 to:
   - pose: Standing
+    slug: ''
     video: 'https://youtu.be/6gTdwKPJGls?t=179'
     canGoBack: true
 numPeople: two

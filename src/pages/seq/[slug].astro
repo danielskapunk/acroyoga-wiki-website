@@ -3,12 +3,11 @@ import { YouTube } from '@astro-community/astro-embed-youtube'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import InfoSection from '../../components/InfoSection.astro'
-import Transition from '../../components/Transition.astro'
 import Layout from '../../layouts/Layout.astro'
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
-	const acroEntries = await getCollection('acro')
+	const acroEntries = await getCollection('seq')
 	return acroEntries.map((entry) => ({
 		params: { slug: entry.slug },
 		props: { entry }
@@ -35,9 +34,6 @@ try {
 		<InfoSection data={entry} />
 
 		<section class="pl-4 pr-4">
-			<h3>Transiciones</h3>
-			<Transition from={entry.data.name} data={entry.data.to} />
-
 			<h3>Imagen</h3>
 			<Image
 				class="mx-auto block h-auto max-h-96 w-auto"

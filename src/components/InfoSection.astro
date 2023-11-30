@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content'
+const entry = (Astro.props.data as CollectionEntry<'acro'>) || {}
+---
+
+<div class="grid text-gray-800">
+	<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90 py-1 pl-4">
+		<div class="">Nombre</div>
+		<div>{entry.data.name}</div>
+	</div>
+	<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 py-1 pl-4">
+		<div>Otros Nombres</div>
+		<div>{entry.data.aka.join(', ')}</div>
+	</div>
+	<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-90 py-1 pl-4">
+		<div>Dificultad</div>
+		<div>{entry.data.level}</div>
+	</div>
+	<div class="grid grid-cols-[1fr_2fr] bg-gray-400 bg-opacity-50 py-1 pl-4">
+		<div>Num Personas</div>
+		<div>{entry.data.numPeople}</div>
+	</div>
+</div>
