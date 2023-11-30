@@ -6,8 +6,12 @@ level: easy
 image: './images/acroyoga-reverse-bird.jpeg'
 tags: []
 to:
-  - pose: Foot to Hand
-    slug: foot-to-hand
+  - pose: Back Bird
+    slug: back-bird
+    video: 'https://youtu.be/BW0e3TwUd3U?t=17'
+    canGoBack: true
+  - pose: Star
+    slug: star
     video: ''
     canGoBack: true
 numPeople: two
