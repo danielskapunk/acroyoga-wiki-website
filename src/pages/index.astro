@@ -1,4 +1,5 @@
 ---
+import Search from 'astro-pagefind/components/Search'
 import { getCollection } from 'astro:content'
 import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
@@ -9,8 +10,69 @@ const q = Astro.url.searchParams.get('q') ?? undefined
 ---
 
 <Layout title="Acroyoga Wiki">
+	<Search id="search" className="pagefind-ui grey" uiOptions={{ showImages: true }} />
+
 	<!-- <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} /> -->
 	<main>
 		<Mosaic items={allAcro} />
 	</main>
 </Layout>
+
+<style is:global>
+	nav {
+		display: grid;
+		place-items: center;
+	}
+
+	.pagefind-ui {
+		--pagefind-ui-scale: 0.75;
+		--pagefind-ui-primary: navy;
+		/* --pagefind-ui-text: black; */
+		--pagefind-ui-border: slategrey;
+		--pagefind-ui-border-width: 1px;
+		--pagefind-ui-border-radius: 0.3rem;
+		--pagefind-ui-font: sans-serif;
+
+		/* width: 50%; */
+	}
+
+	.pagefind-ui.grey {
+		--pagefind-ui-background: rgb(206, 206, 206);
+	}
+
+	.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-top: 0px;
+		z-index: 9999;
+		padding: 0 0em 0em;
+		overflow-y: auto;
+		box-shadow:
+			0 10px 10px -5px rgba(0, 0, 0, 0.2),
+			0 2px 2px 0 rgba(0, 0, 0, 0.1);
+		border-bottom-right-radius: var(--pagefind-ui-border-radius);
+		border-bottom-left-radius: var(--pagefind-ui-border-radius);
+		background-color: var(--pagefind-ui-background);
+	}
+	.pagefind-ui .pagefind-ui__result-link {
+		color: var(--pagefind-ui-primary);
+	}
+
+	.pagefind-ui .pagefind-ui__result-excerpt {
+		color: var(--pagefind-ui-text);
+	}
+	.pagefind-ui__message.pagefind-ui__message {
+		/* color: red; */
+		padding: 0 0 0.5rem 2rem;
+		/* padding-left: 2rem; */
+	}
+	.pagefind-ui__button.pagefind-ui__button {
+		border-radius: 0;
+		background: rgb(179, 179, 179);
+		margin-top: 0;
+	}
+	.pagefind-ui__button.pagefind-ui__button:hover {
+		background: rgb(190, 190, 190);
+	}
+</style>
