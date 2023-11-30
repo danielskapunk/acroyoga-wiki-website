@@ -5,12 +5,10 @@ import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
 const allAcro = await getCollection('acro')
 export const prerender = false
-const q = Astro.url.searchParams.get('q') ?? undefined
-// console.log('q', q, Astro.url.searchParams, Astro.params)
 ---
 
 <Layout title="Acroyoga Wiki">
-	<Search id="search" className="pagefind-ui grey" uiOptions={{ showImages: true }} />
+	<Search id="search" className="pagefind-ui grey px-2 py-4" uiOptions={{ showImages: true }} />
 
 	<!-- <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} /> -->
 	<main>
@@ -24,6 +22,12 @@ const q = Astro.url.searchParams.get('q') ?? undefined
 		place-items: center;
 	}
 
+	.pagefind-ui__search-input {
+		outline: none;
+	}
+	li.pagefind-ui__result:hover {
+		background: rgb(200, 200, 200);
+	}
 	.pagefind-ui {
 		--pagefind-ui-scale: 0.75;
 		--pagefind-ui-primary: navy;
@@ -37,7 +41,7 @@ const q = Astro.url.searchParams.get('q') ?? undefined
 	}
 
 	.pagefind-ui.grey {
-		--pagefind-ui-background: rgb(206, 206, 206);
+		--pagefind-ui-background: rgb(180, 180, 180);
 	}
 
 	.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
