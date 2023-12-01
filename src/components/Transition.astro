@@ -16,7 +16,8 @@ const { data, from } = Astro.props
 					<Icon name="fa:arrow-left" class={`w-2 ${d.canGoBack ? '' : 'invisible'}`} />{' '}
 					<Icon name="fa:arrow-right" class="w-2" />{' '}
 				</div>
-				<a href={`/acro/${d.slug}`}>{d.pose}</a>
+				{d.slug && <a href={`/acro/${d.slug}`}>{d.pose}</a>}
+				{!d.slug && d.pose}
 				{d.video && <a href={d.video}>video</a>}
 			</li>
 		))
