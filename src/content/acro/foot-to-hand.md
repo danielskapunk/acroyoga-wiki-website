@@ -10,7 +10,7 @@ to:
   - pose: Standing
     slug: ''
     video: 'https://youtu.be/6gTdwKPJGls?t=179'
-    canGoBack: true
+
 numPeople: two
 ---
 

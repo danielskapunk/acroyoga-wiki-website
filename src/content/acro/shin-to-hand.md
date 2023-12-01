@@ -1,5 +1,4 @@
 ---
-# layout: ../../layouts/Trick.astro
 name: Shin To Hand
 aka: []
 level: easy
@@ -9,11 +8,18 @@ to:
   - pose: Back Bird
     slug: back-bird
     video: ''
-    canGoBack: true
+
   - pose: Bird
     slug: bird
     video: ''
-    canGoBack: true
+
+  - pose: Throne
+    slug: throne
+    video: ''
+
+  - pose: Whale
+    slug: whale
+    video: ''
 
 numPeople: two
 ---

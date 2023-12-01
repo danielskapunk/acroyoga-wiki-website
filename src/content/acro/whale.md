@@ -10,15 +10,15 @@ to:
   - pose: Standing
     slug: ''
     video: https://youtu.be/4WMAZ67brUc?t=25
-    canGoBack: true
+
   - pose: (pop) Throne
     slug: throne
     video: https://youtu.be/FKocikVTzHM?t=41
-    canGoBack: true
+
   - pose: Floor Handstand
     slug: ''
     video: https://youtu.be/4WMAZ67brUc?t=117
-    canGoBack: true
+
 numPeople: two
 ---
 

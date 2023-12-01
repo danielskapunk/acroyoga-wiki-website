@@ -9,11 +9,10 @@ to:
   - pose: Standing
     slug: ''
     video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
-    canGoBack: true
+
   - pose: Croc
     slug: croc
     video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
-    canGoBack: true
 
 numPeople: two
 ---

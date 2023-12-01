@@ -10,7 +10,7 @@ to:
   - pose: Throne
     slug: throne
     video: a
-    canGoBack: true
+
 numPeople: two
 ---
 

@@ -19,7 +19,7 @@ const acroCollection = defineCollection({
 					pose: z.string(),
 					slug: z.string(),
 					video: z.string(),
-					canGoBack: z.boolean()
+					canGoBack: z.boolean().default(true)
 				})
 			),
 			tags: z.array(z.string()),

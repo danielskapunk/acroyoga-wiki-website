@@ -8,7 +8,7 @@ to:
   - pose: Bicep Stand
     slug: 'std-bicep-stand'
     video: 'https://www.instagram.com/70278cc7-4c8a-4da3-a0ec-3853a6ac19bb'
-    canGoBack: true
+
 numPeople: two
 ---
 

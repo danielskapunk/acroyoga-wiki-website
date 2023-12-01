@@ -10,15 +10,14 @@ to:
   - pose: Standing
     slug: ''
     video: ''
-    canGoBack: true
+
   - pose: Bird
     slug: 'bird'
     video: ''
-    canGoBack: true
+
   - pose: Back Bird
     slug: 'back-bird'
     video: ''
-    canGoBack: true
 
 numPeople: two
 ---

@@ -9,7 +9,7 @@ to:
   - pose: Back Bird
     slug: back-bird
     video: ''
-    canGoBack: true
+
 numPeople: two
 ---
 

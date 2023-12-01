@@ -11,23 +11,23 @@ to:
   - pose: Standing
     slug: ''
     video: https://youtu.be/qa5iG6k3W0s?t=36
-    canGoBack: true
+
   - pose: Reverse Shoulder Stand
     slug: reverse-shoulder-stand
     video: https://youtu.be/KcMntJdIUGA?t=24
-    canGoBack: true
+
   - pose: Bat
     slug: bat
     video: ''
-    canGoBack: true
+
   - pose: Inside Side Star
     slug: inside-side-star
     video: https://youtu.be/BW0e3TwUd3U?t=17
-    canGoBack: true
+
   - pose: Reverse Bird
     slug: reverse-bird
     video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
-    canGoBack: true
+
   - pose: (pop) Reverse Bird
     slug: reverse-bird
     video: https://youtu.be/UekRYMSAfmQ?t=11

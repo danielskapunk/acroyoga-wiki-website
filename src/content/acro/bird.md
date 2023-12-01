@@ -9,31 +9,31 @@ to:
   - pose: flyer standing
     slug: ''
     video: https://www.youtube.com/watch?v=r6q8JxAUfh4&t=6s
-    canGoBack: true
+
   - pose: Candelstick
     slug: candlestick
     video: https://www.youtube.com/watch?v=aXDDjqyc6ao
-    canGoBack: true
+
   - pose: Side Star (no hands)
     slug: reverse-inside-side-star
     video: https://youtu.be/g6XH0ZO241c?t=10
-    canGoBack: true
+
   - pose: Low Bird
     slug: low-bird
     video: https://www.youtube.com/watch?v=bGOsc7Fg3U8
-    canGoBack: true
+
   - pose: (pop) Reverse Star
     slug: reverse-star
     video: https://photos.app.goo.gl/jH5r6E9nLjRFxV3c7
-    canGoBack: true
+
   - pose: (pop) Star
     slug: star
     video: https://www.youtube.com/watch?v=ESTQVir4LbA&list=UUZkIAsA8JGmM4IiRSZm6kFw&index=112
-    canGoBack: true
+
   - pose: Throne
     slug: throne
     video: https://youtu.be/iRr1UmNFFh0?t=28
-    canGoBack: true
+
 numPeople: two
 ---
 
