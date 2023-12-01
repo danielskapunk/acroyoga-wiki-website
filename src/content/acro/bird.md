@@ -30,6 +30,10 @@ to:
     slug: star
     video: https://www.youtube.com/watch?v=ESTQVir4LbA&list=UUZkIAsA8JGmM4IiRSZm6kFw&index=112
     canGoBack: true
+  - pose: Throne
+    slug: throne
+    video: https://youtu.be/iRr1UmNFFh0?t=28
+    canGoBack: true
 numPeople: two
 ---
 
