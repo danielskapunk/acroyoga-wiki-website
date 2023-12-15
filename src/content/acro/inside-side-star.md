@@ -1,19 +1,18 @@
 ---
-name: Reverse Shoulder Stand
+# layout: ../../layouts/Trick.astro
+name: Inside Side Star
 aka: []
 level: easy
-image: './images/acroyoga-reverse-shoulder-stand.webp'
+image: './images/acroyoga-inside-side-star.jpeg'
 tags: []
 to:
-  - pose: Back Bird
-    slug: back-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=25'
-  - pose: Reverse Bird
-    slug: reverse-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=27'
-
+  - pose: Reverse Shin to Foot
+    slug: reverse-shin-to-foot
+    video: 'https://youtu.be/1RvCbJ_IqCM?t=100'
 numPeople: two
 ---
+
+- [22 Ways to Inside Side Star part 1](https://youtu.be/1RvCbJ_IqCM)
 
 ## Drills
 

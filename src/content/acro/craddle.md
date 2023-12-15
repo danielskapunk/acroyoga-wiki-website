@@ -10,6 +10,9 @@ to:
   - pose: Standing
     slug: ''
     video: ''
+  - pose: (twist 360) craddle
+    slug: ''
+    video: https://youtu.be/7dDnUH27FDg?t=69
 
 numPeople: two
 ---

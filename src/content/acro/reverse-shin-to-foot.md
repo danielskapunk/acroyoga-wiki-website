@@ -1,17 +1,14 @@
 ---
-name: Reverse Shoulder Stand
+# layout: ../../layouts/Trick.astro
+name: Reverse Shin to Foot
 aka: []
 level: easy
-image: './images/acroyoga-reverse-shoulder-stand.webp'
+image: './images/acroyoga-reverse-shin-to-foot.jpeg'
 tags: []
 to:
-  - pose: Back Bird
-    slug: back-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=25'
-  - pose: Reverse Bird
-    slug: reverse-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=27'
-
+  - pose: Inside Side Star
+    slug: inside-side-star
+    video: 'https://youtu.be/1RvCbJ_IqCM?t=100'
 numPeople: two
 ---
 
