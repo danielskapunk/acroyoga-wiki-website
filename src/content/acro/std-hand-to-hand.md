@@ -1,7 +1,7 @@
 ---
 name: Std Hand to Hand
 aka: [H2H]
-level: easy
+level: medium
 image: './images/acro-hand-to-hand.jpeg'
 tags: []
 to:

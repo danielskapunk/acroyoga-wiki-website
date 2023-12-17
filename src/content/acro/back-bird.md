@@ -24,7 +24,7 @@ to:
     slug: inside-side-star
     video: https://youtu.be/BW0e3TwUd3U?t=17
 
-  - pose: Reverse Bird
+  - pose: (inside side star) Reverse Bird
     slug: reverse-bird
     video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
 
@@ -32,6 +32,12 @@ to:
     slug: reverse-bird
     video: https://youtu.be/UekRYMSAfmQ?t=11
     canGoBack: false
+
+  - pose: (pop) Hand to Hand (base sit up)
+    slug: hand-to-hand
+    video: https://www.instagram.com/reel/CilssW2DhN6
+    canGoBack: false
+
 numPeople: two
 ---
 

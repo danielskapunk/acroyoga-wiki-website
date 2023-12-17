@@ -7,12 +7,15 @@ image: './images/std-bicep-stand.png'
 tags: []
 to:
   - pose: Standing
-    slug: ''
     video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
 
   - pose: Croc
-    slug: croc
+    slug: std-croc
     video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
+
+  - pose: (roll down) Standing
+    video: https://youtu.be/bvFA6olSYq4?t=8
+    canGoBack: false
 
 numPeople: two
 ---

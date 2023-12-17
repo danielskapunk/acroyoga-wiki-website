@@ -13,6 +13,9 @@ to:
   - pose: (twist 360) craddle
     slug: ''
     video: https://youtu.be/7dDnUH27FDg?t=69
+  - pose: (twist 720) craddle
+    slug: ''
+    video: https://youtu.be/zi6paWvpivM?t=33
 
 numPeople: two
 ---

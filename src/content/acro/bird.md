@@ -10,8 +10,8 @@ to:
     slug: ''
     video: https://www.youtube.com/watch?v=r6q8JxAUfh4&t=6s
 
-  - pose: Candelstick
-    slug: candlestick
+  - pose: Shoulder Stand
+    slug: shoulderstand
     video: https://www.youtube.com/watch?v=aXDDjqyc6ao
 
   - pose: Side Star (no hands)
@@ -22,9 +22,17 @@ to:
     slug: low-bird
     video: https://www.youtube.com/watch?v=bGOsc7Fg3U8
 
+  - pose: Reverse Star
+    slug: reverse-star
+    video: https://youtu.be/vccFNDI6y74?t=28
+
   - pose: (pop) Reverse Star
     slug: reverse-star
     video: https://photos.app.goo.gl/jH5r6E9nLjRFxV3c7
+
+  - pose: Star
+    slug: star
+    video: https://youtu.be/lw88JUFB2Ok?t=29
 
   - pose: (pop) Star
     slug: star

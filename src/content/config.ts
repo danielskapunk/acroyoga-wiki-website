@@ -17,8 +17,8 @@ const acroCollection = defineCollection({
 			to: z.array(
 				z.object({
 					pose: z.string(),
-					slug: z.string(),
-					video: z.string(),
+					slug: z.string().default(''),
+					video: z.string().default(''),
 					canGoBack: z.boolean().default(true)
 				})
 			),
