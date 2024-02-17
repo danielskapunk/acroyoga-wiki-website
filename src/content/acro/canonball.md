@@ -9,7 +9,7 @@ to:
     slug: ''
     video: 'https://youtu.be/U32KQZU4cjw?t=9'
   - pose: (swing) hand to hand
-    slug: 'hand-to-hand'
+    slug: 'std-hand-to-hand'
     video: ''
 numPeople: two
 ---

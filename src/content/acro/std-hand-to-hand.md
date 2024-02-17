@@ -17,13 +17,16 @@ to:
     slug: ''
     video: ''
 
-  - pose: high straddle
+  - pose: high straddle chair
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=80
 
   - pose: canonball
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=113
+  - pose: drag up
+    slug: ''
+    video: https://www.instagram.com/p/Bm3g6xFFxYx
 
   - pose: craddle
     slug: craddle
@@ -35,9 +38,19 @@ to:
   - pose: calf pop
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=98
+  - pose: leg pop
+    slug: ''
+    video: https://www.instagram.com/p/Bvtq75PBmdN/
+  - pose: roll back dismount
+    slug: ''
+    video: https://www.youtube.com/watch?v=PPFXjTymSL4
 
 numPeople: two
 ---
+
+high straddle chair [video2](https://www.instagram.com/p/Blw2SGFHni6/)
+cannonball [video2](https://www.instagram.com/p/Bl8Nkexjmsv/)
+Hand to Hand with one grip in Reverse Hand to Hand [video](https://www.facebook.com/karentka/videos/10217541124906503/)
 
 ## Drills
 
