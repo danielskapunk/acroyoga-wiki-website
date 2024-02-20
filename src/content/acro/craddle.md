@@ -19,6 +19,10 @@ to:
   - pose: (scarf) craddle
     slug: craddle
     video: https://www.youtube.com/watch?v=6bZ2ha5A_Po
+  - pose: (split lift) standing
+    video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
+  - pose: (handstand dismount) handstand or standing
+    video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
 
 numPeople: two
 ---

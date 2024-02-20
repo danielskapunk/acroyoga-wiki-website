@@ -4,7 +4,7 @@ aka: [silla-plancha dorsal]
 level: easy
 image: './images/back-lever-on-thighs.jpeg'
 video: 'https://youtu.be/6gTdwKPJGls?t=179'
-tags: [standing, dance-lifts]
+tags: [standing, dance-lifts, counterbalance]
 to:
   - pose: Standing
     slug: ''

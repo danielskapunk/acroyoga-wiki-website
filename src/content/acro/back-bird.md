@@ -4,7 +4,7 @@ name: Back Bird
 slug: back-bird
 aka: [palomita de espalda]
 level: easy
-image: './images/acro-back-bird.jpeg'
+image: './images/acro-back-bird.png'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
 to:

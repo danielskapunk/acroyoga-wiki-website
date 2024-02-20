@@ -11,7 +11,7 @@ const acroCollection = defineCollection({
 			aka: z.array(z.string()),
 			level: z.enum(['easy', 'medium', 'hard']),
 			image: image().refine((img) => img.width >= 600, {
-				message: 'Cover image must be at least 1080 pixels wide!'
+				message: 'Cover image must be at least 600 pixels wide!'
 			}),
 			video: z.optional(z.string()),
 			to: z.array(

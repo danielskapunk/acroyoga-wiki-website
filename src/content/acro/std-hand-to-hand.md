@@ -1,6 +1,6 @@
 ---
 name: Std Hand to Hand
-aka: [H2H]
+aka: [H2H, mano a mano]
 level: medium
 image: './images/acro-hand-to-hand.jpeg'
 tags: []
@@ -24,6 +24,7 @@ to:
   - pose: canonball
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=113
+
   - pose: drag up
     slug: ''
     video: https://www.instagram.com/p/Bm3g6xFFxYx
@@ -44,6 +45,9 @@ to:
   - pose: roll back dismount
     slug: ''
     video: https://www.youtube.com/watch?v=PPFXjTymSL4
+  - pose: half kamikaze dismount
+    slug: ''
+    video: https://www.instagram.com/p/BvAwlNml1xd/
 
 numPeople: two
 ---
@@ -64,3 +68,5 @@ Hand to Hand with one grip in Reverse Hand to Hand [video](https://www.facebook.
   _no hands star_ -->
 
 :::
+
+- H2H one point/Knot on two hands [video](https://youtu.be/VodvHIuV-8o?t=193)
