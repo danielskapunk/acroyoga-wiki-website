@@ -66,6 +66,17 @@ try {
 </Layout>
 
 <style is:global>
+	.seq {
+		min-width: 0;
+	}
+	.seq p {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.seq img {
+		object-fit: cover;
+		height: revert-layer;
+	}
 	.variantes ul {
 		display: flex;
 		flex-wrap: wrap;

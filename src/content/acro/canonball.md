@@ -3,6 +3,7 @@ name: Std Cannonball
 aka: [high cannonball]
 level: easy
 image: './images/std-cannonball.png'
+video: 'https://youtu.be/68fdEP5tacY?t=78'
 tags: []
 to:
   - pose: (swing) standing

@@ -54,9 +54,8 @@ Elevador --> F2H [video](https://www.instagram.com/p/BzJrlB9nPJn/)
 
 ## Variantes
 
-no hay variantes aun
+<!-- - [![alt-name](./images/thumbnail.png)](https://youtu.be/68fdEP5tacY?t=5)_trick name_ -->
 
-<!-- - ![a](/)
-  _To do_ -->
+- [![calf stand](./images/std-calf-standing.png)](https://youtu.be/68fdEP5tacY?t=5)_calf stand_
 
 :::

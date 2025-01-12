@@ -3,9 +3,10 @@ name: Std Hand to Hand
 aka: [H2H, mano a mano]
 level: medium
 image: './images/acro-hand-to-hand.jpeg'
+video: 'https://youtu.be/X9XESe_B7Ow'
 tags: []
 to:
-  - pose: pacheska (Standing)
+  - pose: pacheska/inlocate (Standing)
     slug: ''
     video: https://www.instagram.com/reel/C0PQfRPx9C5
 
@@ -13,12 +14,12 @@ to:
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=31
 
-  - pose: princesa
-    slug: ''
-    video: ''
+  - pose: std h2h chair / princesa
+    slug: std-hand-to-hand-chair
+    video: https://youtu.be/68fdEP5tacY?t=43
 
   - pose: high straddle chair
-    slug: ''
+    slug: 'std-hand-to-hand-chair'
     video: https://youtu.be/X9XESe_B7Ow?t=80
 
   - pose: canonball
@@ -52,9 +53,9 @@ to:
 numPeople: two
 ---
 
-high straddle chair [video2](https://www.instagram.com/p/Blw2SGFHni6/)
-cannonball [video2](https://www.instagram.com/p/Bl8Nkexjmsv/)
-Hand to Hand with one grip in Reverse Hand to Hand [video](https://www.facebook.com/karentka/videos/10217541124906503/)
+- high straddle chair [video2](https://www.instagram.com/p/Blw2SGFHni6/)
+- cannonball [video2](https://www.instagram.com/p/Bl8Nkexjmsv/)
+- Hand to Hand with one grip in Reverse Hand to Hand [video](https://www.facebook.com/karentka/videos/10217541124906503/)
 
 ## Drills
 
