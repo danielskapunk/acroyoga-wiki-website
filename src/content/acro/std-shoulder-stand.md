@@ -1,6 +1,5 @@
 ---
 name: Std Shoulder stand
-slug: std-shoulder-stand
 aka: []
 level: easy
 image: './images/acroyoga-shoulder-stand.jpeg'

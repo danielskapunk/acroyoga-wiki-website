@@ -11,7 +11,7 @@ to:
     video: https://www.youtube.com/watch?v=r6q8JxAUfh4&t=6s
 
   - pose: Shoulder Stand
-    slug: shoulderstand
+    slug: shoulder-stand
     video: https://www.youtube.com/watch?v=aXDDjqyc6ao
 
   - pose: Side Star (no hands)
@@ -55,7 +55,7 @@ numPeople: two
 - Palomita una mano
 - Palomita sin manos
 - Palomita un pie una mano
-  </br>
+  <br>
 
 :::section{.variantes}
 

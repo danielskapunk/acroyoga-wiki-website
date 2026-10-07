@@ -6,11 +6,15 @@ image: './images/acro-hand-to-hand.jpeg'
 video: 'https://youtu.be/X9XESe_B7Ow'
 tags: []
 to:
-  - pose: pacheska/inlocate (Standing)
+  - pose: cast relocate
+    slug: ''
+    video: https://www.instagram.com/p/DMbJsl-yu_L/
+
+  - pose: pacheska/inlocate
     slug: ''
     video: https://www.instagram.com/reel/C0PQfRPx9C5
 
-  - pose: bicep pop (Standing)
+  - pose: forearm pop
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=31
 
@@ -33,10 +37,12 @@ to:
   - pose: craddle
     slug: craddle
     video: https://youtu.be/0vtAzETB6pk?t=47
+
   - pose: penguin (drop)
     slug: ''
     video: https://youtu.be/VodvHIuV-8o?t=265
     canGoBack: false
+
   - pose: calf pop
     slug: ''
     video: https://youtu.be/X9XESe_B7Ow?t=98
@@ -46,9 +52,19 @@ to:
   - pose: roll back dismount
     slug: ''
     video: https://www.youtube.com/watch?v=PPFXjTymSL4
+
   - pose: half kamikaze dismount
     slug: ''
     video: https://www.instagram.com/p/BvAwlNml1xd/
+
+  - pose: diamodov
+    video: https://www.instagram.com/p/DL-16_WyIhZ/
+
+  - pose: courbet
+    video: https://www.instagram.com/p/DLvLyD0Sqmy/
+  
+  - pose: cascade
+    video: https://www.instagram.com/p/DLNk9PnuwUB/
 
 numPeople: two
 ---

@@ -1,16 +1,20 @@
 ---
-import Search from 'astro-pagefind/components/Search'
+import Search from 'astro-pagefind/components/Search.astro'
 import { getCollection } from 'astro:content'
 import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
 const allAcro = await getCollection('acro')
-export const prerender = false
+// Keep the legacy filename order (Content Layer sorts by entry id instead)
+allAcro.sort((a, b) => {
+	const x = String(a.filePath)
+	const y = String(b.filePath)
+	return x < y ? -1 : x > y ? 1 : 0
+})
 ---
 
 <Layout title="Acroyoga Wiki">
-	<Search id="search" className="pagefind-ui grey px-2 py-4" uiOptions={{ showImages: true }} />
+	<Search instance="search" className="pagefind-search grey px-2 py-4" />
 
-	<!-- <Search id="search" className="pagefind-ui" uiOptions={{ showImages: true }} /> -->
 	<main>
 		<Mosaic items={allAcro} />
 	</main>
@@ -22,61 +26,15 @@ export const prerender = false
 		place-items: center;
 	}
 
-	.pagefind-ui__search-input {
-		outline: none;
-	}
-	li.pagefind-ui__result:hover {
-		background: rgb(200, 200, 200);
-	}
-	.pagefind-ui {
-		--pagefind-ui-scale: 0.75;
-		--pagefind-ui-primary: navy;
-		/* --pagefind-ui-text: black; */
-		--pagefind-ui-border: slategrey;
-		--pagefind-ui-border-width: 1px;
-		--pagefind-ui-border-radius: 0.3rem;
-		--pagefind-ui-font: sans-serif;
-
-		/* width: 50%; */
-	}
-
-	.pagefind-ui.grey {
-		--pagefind-ui-background: rgb(180, 180, 180);
-	}
-
-	.pagefind-ui .pagefind-ui__drawer:not(.pagefind-ui__hidden) {
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin-top: 0px;
-		z-index: 9999;
-		padding: 0 0em 0em;
-		overflow-y: auto;
-		box-shadow:
-			0 10px 10px -5px rgba(0, 0, 0, 0.2),
-			0 2px 2px 0 rgba(0, 0, 0, 0.1);
-		border-bottom-right-radius: var(--pagefind-ui-border-radius);
-		border-bottom-left-radius: var(--pagefind-ui-border-radius);
-		background-color: var(--pagefind-ui-background);
-	}
-	.pagefind-ui .pagefind-ui__result-link {
-		color: var(--pagefind-ui-primary);
-	}
-
-	.pagefind-ui .pagefind-ui__result-excerpt {
-		color: var(--pagefind-ui-text);
-	}
-	.pagefind-ui__message.pagefind-ui__message {
-		/* color: red; */
-		padding: 0 0 0.5rem 2rem;
-		/* padding-left: 2rem; */
-	}
-	.pagefind-ui__button.pagefind-ui__button {
-		border-radius: 0;
-		background: rgb(179, 179, 179);
-		margin-top: 0;
-	}
-	.pagefind-ui__button.pagefind-ui__button:hover {
-		background: rgb(190, 190, 190);
+	/* Pagefind Component UI theme (astro-pagefind v2) */
+	.pagefind-search {
+		--pf-background: rgb(180, 180, 180);
+		--pf-hover: rgb(200, 200, 200);
+		--pf-border: slategrey;
+		--pf-border-radius: 0.3rem;
+		--pf-font: sans-serif;
+		--pf-input-height: 32px;
+		--pf-input-font-size: 14px;
+		--pf-searchbox-max-width: 100%;
 	}
 </style>

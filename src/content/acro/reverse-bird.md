@@ -27,7 +27,7 @@ numPeople: two
 - Palomita una mano
 - Palomita sin manos
 - Palomita un pie una mano
-  </br>
+  <br>
 
 :::section{.variantes}
 

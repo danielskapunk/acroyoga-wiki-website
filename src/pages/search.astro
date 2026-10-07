@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content'
 import Fuse from 'fuse.js'
 import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
-export const prerender = false
 
 // const allAcro = await getCollection('acro')
 const q = Astro.url.searchParams.get('q') ?? undefined

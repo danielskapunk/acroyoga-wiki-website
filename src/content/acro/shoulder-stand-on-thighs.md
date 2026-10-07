@@ -1,6 +1,5 @@
 ---
 name: Shoulder stand on Thighs
-slug: shoulder-stand-on-thighs
 aka: []
 level: easy
 image: './images/acroyoga-shoulder-stand-on-thighs.jpeg'

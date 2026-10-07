@@ -1,5 +1,5 @@
-import mdx from '@astrojs/mdx'
-import tailwind from '@astrojs/tailwind'
+import { unified } from '@astrojs/markdown-remark'
+import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
 import { defineConfig } from 'astro/config'
 import { h } from 'hastscript'
@@ -34,7 +34,7 @@ export default defineConfig({
 		format: 'file'
 	},
 	markdown: {
-		remarkPlugins: [remarkDirective, remarkSectionPlugin]
+		processor: unified({ remarkPlugins: [remarkDirective, remarkSectionPlugin] })
 	},
-	integrations: [mdx(), tailwind(), pagefind()]
+	integrations: [icon(), pagefind()]
 })

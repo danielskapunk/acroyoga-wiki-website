@@ -1,20 +1,27 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube'
 import { Image } from 'astro:assets'
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import InfoSection from '../../components/InfoSection.astro'
 import Layout from '../../layouts/Layout.astro'
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
 	const acroEntries = await getCollection('seq')
+	acroEntries.forEach((entry) => {
+		if (entry.data.image.width < 600) {
+			throw new Error(
+				`Cover image must be at least 600 pixels wide! (${entry.id}: ${entry.data.image.src})`
+			)
+		}
+	})
 	return acroEntries.map((entry) => ({
-		params: { slug: entry.slug },
+		params: { slug: entry.id },
 		props: { entry }
 	}))
 }
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content } = await render(entry)
 var params = ''
 try {
 	let url = new URL(entry.data.video || '')

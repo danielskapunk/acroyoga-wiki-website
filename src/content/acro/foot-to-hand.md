@@ -1,6 +1,5 @@
 ---
 name: Foot to Hand
-slug: foot-to-hand
 aka: [F2H]
 level: easy
 image: './images/acroyoga-foot-to-hand.jpeg'
