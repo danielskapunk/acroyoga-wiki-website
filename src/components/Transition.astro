@@ -23,7 +23,9 @@ const { title, mode, current, data, ctx } = Astro.props
 
 <section>
 	<h3>{title}</h3>
-	<ul>
+	<ul
+		class="flex flex-col gap-y-1 sm:grid sm:grid-cols-[auto_60px_auto_60px_1fr_65px] sm:items-center sm:gap-x-2"
+	>
 		{
 			data.map((t) => {
 				const pose = ctx.poseInfo(t.pose)
@@ -31,17 +33,25 @@ const { title, mode, current, data, ctx } = Astro.props
 				const source = mode === 'in' ? pose : { label: current, href: null }
 				const dest = mode === 'in' ? { label: current, href: null } : pose
 				return (
-					<li class="flex flex-wrap items-center gap-2 py-0.5">
-						<span>{source.label}</span>
-						<span aria-hidden="true">→</span>
-						{transition.href ? (
-							<a href={transition.href}>{transition.label}</a>
-						) : (
-							<span>{transition.label}</span>
-						)}
-						<span aria-hidden="true">→</span>
-						{dest.href ? <a href={dest.href}>{dest.label}</a> : <span>{dest.label}</span>}
-						{t.video && <a href={t.video}>video</a>}
+					<li class="flex flex-wrap items-center gap-x-2 gap-y-1 sm:contents">
+						<span class="text-right">{source.label}</span>
+						<span class="text-center" aria-hidden="true">
+							→
+						</span>
+						<span>
+							{transition.href ? (
+								<a href={transition.href}>{transition.label}</a>
+							) : (
+								<span>{transition.label}</span>
+							)}
+						</span>
+						<span class="text-center" aria-hidden="true">
+							→
+						</span>
+						<span>
+							{dest.href ? <a href={dest.href}>{dest.label}</a> : <span>{dest.label}</span>}
+						</span>
+						<span>{t.video && <a href={t.video}>video</a>}</span>
 					</li>
 				)
 			})
