@@ -3,25 +3,26 @@ name: Std Hand to Hand
 shortName: h2h
 aka: [H2H, mano a mano]
 level: medium
-image: './images/acro-hand-to-hand.jpeg'
+image: './images/dani-nico-h2h.jpg'
 video: 'https://youtu.be/X9XESe_B7Ow'
 tags: []
 transitions:
   - name: pacheska
-    aka: [pacheska, podcheska, inlocate]
+    aka: [podcheska, inlocate]
     pose: standing
     direction: in
     video: https://www.instagram.com/reel/C0PQfRPx9C5
 
   - name: forearm pop
+    aka: [cartwheel]
     pose: standing
     direction: both
     video: https://youtu.be/X9XESe_B7Ow?t=31
 
   - name: std h2h chair
-    aka: [princess]
+    aka: [princess, half podcheska, media pacheska]
     pose: std-hand-to-hand-chair
-    direction: out
+    direction: both
     video: https://youtu.be/68fdEP5tacY?t=43
 
   - name: high straddle chair
@@ -31,7 +32,7 @@ transitions:
 
   - name: cannonball
     pose: standing
-    direction: in
+    direction: both
     video: https://youtu.be/X9XESe_B7Ow?t=113
 
   - name: drag up
@@ -51,37 +52,38 @@ transitions:
 
   - name: calf pop
     pose: standing
-    direction: out
+    direction: in
     video: https://youtu.be/X9XESe_B7Ow?t=98
 
   - name: leg pop
+    aka: [side podcheska]
     pose: standing
-    direction: out
+    direction: in
     video: https://www.instagram.com/p/Bvtq75PBmdN/
 
-  - name: roll back dismount
+  - name: roll back
     pose: standing
     direction: out
     video: https://www.youtube.com/watch?v=PPFXjTymSL4
 
-  - name: half kamikaze dismount
+  - name: half kamikaze
     pose: standing
     direction: out
     video: https://www.instagram.com/p/BvAwlNml1xd/
 
   - name: diamodov
     pose: standing
-    direction: out
+    direction: in
     video: https://www.instagram.com/p/DL-16_WyIhZ/
 
   - name: courbet
-    pose: standing
+    pose: std-foot-to-hand
     direction: out
     video: https://www.instagram.com/p/DLvLyD0Sqmy/
 
   - name: cascade
-    pose: standing
-    direction: out
+    pose: std-foot-to-hand
+    direction: in
     video: https://www.instagram.com/p/DLNk9PnuwUB/
 numPeople: two
 ---
