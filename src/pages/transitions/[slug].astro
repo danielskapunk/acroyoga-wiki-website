@@ -22,7 +22,7 @@ const { Content } = await render(entry)
 			{
 				entry.data.aka.length > 0 && (
 					<div class="py-1">
-						<span class="font-bold">Otros Nombres: </span>
+						<span class="font-bold">Other Names: </span>
 						{entry.data.aka.join(', ')}
 					</div>
 				)
@@ -31,8 +31,8 @@ const { Content } = await render(entry)
 				entry.data.video && (
 					<div class="py-1">
 						<a class="btn-video" href={entry.data.video}>
-							<Icon name="fa:play" class="h-3 w-auto" />
-							Ver video
+							<Icon name="tabler:play" class="h-3 w-auto" />
+							Watch video
 						</a>
 					</div>
 				)

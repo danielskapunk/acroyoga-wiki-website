@@ -17,6 +17,7 @@ transitions:
   - name: back bird
     pose: back-bird
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

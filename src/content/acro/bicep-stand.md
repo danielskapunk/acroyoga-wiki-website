@@ -23,6 +23,7 @@ transitions:
     pose: inside-side-star
     direction: both
     video: https://youtu.be/18U9fdj9ueQ?t=71
+category: [l-basing]
 numPeople: two
 ---
 

@@ -42,7 +42,7 @@ try {
 	<article class="bg-gray-300 pb-4">
 		<h1 class="text-center font-display font-bold">{entry.data.name}</h1>
 
-		<Image class="h-96 w-full object-cover" src={entry.data.image} alt="imagen del truco" />
+		<Image class="h-96 w-full object-cover" src={entry.data.image} alt="trick image" />
 
 		<InfoSection data={entry} />
 
@@ -50,7 +50,7 @@ try {
 			{
 				into.length > 0 && (
 					<Transition
-						title={`Transiciones hacia ${entry.data.name}`}
+						title={`Transitions to ${entry.data.name}`}
 						mode="in"
 						current={currentLabel}
 						data={into}
@@ -62,7 +62,7 @@ try {
 			{
 				from.length > 0 && (
 					<Transition
-						title={`Transiciones desde ${entry.data.name}`}
+						title={`Transitions from ${entry.data.name}`}
 						mode="out"
 						current={currentLabel}
 						data={from}
@@ -72,11 +72,11 @@ try {
 				)
 			}
 
-			<h3>Imagen</h3>
+			<h3>Image</h3>
 			<Image
 				class="mx-auto block h-auto max-h-96 w-auto"
 				src={entry.data.image}
-				alt="imagen del truco"
+				alt="trick image"
 			/>
 
 			{

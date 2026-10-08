@@ -10,9 +10,11 @@ transitions:
     pose: standing
     direction: both
     video: https://youtu.be/QBtsayE8px8?t=18
+category: [l-basing]
 numPeople: three
 ---
-<!-- 
+
+<!--
 ## Drills
 
 [no video](https://www.youtube.com/) -->

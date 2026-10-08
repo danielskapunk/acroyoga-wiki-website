@@ -85,6 +85,7 @@ transitions:
     pose: std-foot-to-hand
     direction: in
     video: https://www.instagram.com/p/DLNk9PnuwUB/
+category: [standing]
 numPeople: two
 ---
 

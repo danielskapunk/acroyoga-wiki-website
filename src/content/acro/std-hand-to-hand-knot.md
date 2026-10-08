@@ -11,6 +11,7 @@ transitions:
     pose: std-hand-to-hand
     direction: both
     video: https://youtu.be/68fdEP5tacY?t=117
+category: [standing]
 numPeople: two
 ---
 

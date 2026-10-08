@@ -20,6 +20,7 @@ transitions:
   - name: whale
     pose: whale
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

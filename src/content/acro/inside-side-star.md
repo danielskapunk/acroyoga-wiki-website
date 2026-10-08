@@ -10,6 +10,7 @@ transitions:
     pose: reverse-shin-to-foot
     direction: both
     video: https://youtu.be/1RvCbJ_IqCM?t=100
+category: [l-basing]
 numPeople: two
 ---
 

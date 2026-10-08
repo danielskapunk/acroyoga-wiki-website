@@ -41,6 +41,7 @@ transitions:
     pose: kamizaze
     direction: out
     video: https://www.instagram.com/p/BusaXxglYE5/
+category: [standing]
 numPeople: two
 ---
 

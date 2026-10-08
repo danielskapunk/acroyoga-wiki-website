@@ -53,7 +53,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 							)}
 
 							<span class="flex justify-center text-gray-500" aria-hidden="true">
-								<Icon name="fa:chevron-right" class="h-3 w-auto" />
+								<Icon name="tabler:chevron-right" class="h-3 w-auto" />
 							</span>
 
 							{transition.href ? (
@@ -65,7 +65,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 							)}
 
 							<span class="flex justify-center text-gray-500" aria-hidden="true">
-								<Icon name="fa:chevron-right" class="h-3 w-auto" />
+								<Icon name="tabler:chevron-right" class="h-3 w-auto" />
 							</span>
 
 							{dest.href ? (
@@ -86,7 +86,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 									aria-label={`Video: ${transition.label}`}
 									title={transition.label}
 								>
-									<Icon name="fa:play" class="h-3 w-auto" />
+									<Icon name="tabler:play" class="h-3 w-auto" />
 								</button>
 							) : t.video ? (
 								<a
@@ -97,7 +97,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 									aria-label={`Video: ${transition.label}`}
 									title={transition.label}
 								>
-									<Icon name="fa:play" class="h-3 w-auto" />
+									<Icon name="tabler:play" class="h-3 w-auto" />
 								</a>
 							) : (
 								<span class="block" />

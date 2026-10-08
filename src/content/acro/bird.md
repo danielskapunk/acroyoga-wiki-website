@@ -50,6 +50,7 @@ transitions:
     pose: throne
     direction: both
     video: https://youtu.be/iRr1UmNFFh0?t=28
+category: [l-basing]
 numPeople: two
 ---
 

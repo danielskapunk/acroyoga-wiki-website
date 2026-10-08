@@ -19,5 +19,6 @@ transitions:
     pose: shoulder-bird
     direction: out
     video: https://www.instagram.com/p/Bq8raM2gYil/
+category: [standing]
 numPeople: three
 ---

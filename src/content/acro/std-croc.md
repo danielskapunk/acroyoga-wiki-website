@@ -10,6 +10,7 @@ transitions:
     pose: std-bicep-stand
     direction: both
     video: https://www.instagram.com/70278cc7-4c8a-4da3-a0ec-3853a6ac19bb
+category: [standing]
 numPeople: two
 ---
 

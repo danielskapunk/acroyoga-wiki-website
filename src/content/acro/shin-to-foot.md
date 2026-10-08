@@ -12,6 +12,7 @@ transitions:
   - name: walk / pop
     pose: throne
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

@@ -25,6 +25,7 @@ transitions:
     pose: handstand
     direction: out
     video: https://www.instagram.com/p/BuqrSUxlcIO
+category: [standing]
 numPeople: two
 ---
 

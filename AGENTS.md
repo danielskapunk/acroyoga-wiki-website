@@ -19,7 +19,7 @@ Order: edit → prettier → `npm run build`. `npm run build` failing on frontma
 - `src/content/seq/*.md` — sequences → route `/seq/<filename>`
 - `src/content/transitions/*.md` — transition pages → route `/transitions/<filename>`; currently empty (the collection + route exist, links activate when a file appears)
 - `src/content.config.ts` — Content Layer collections (`glob()` loaders, `z` from `astro/zod`). Build fails on invalid frontmatter:
-  - acro: `name`, `shortName` (optional), `aka[]`, `level` (easy|medium|hard), `image` (relative path, ≥600px wide enforced in `getStaticPaths`, not the schema), `tags[]`, `transitions[]`, `numPeople` (two|three|more); `video` optional
+  - acro: `name`, `shortName` (optional), `aka[]`, `level` (easy|medium|hard), `image` (relative path, ≥600px wide enforced in `getStaticPaths`, not the schema), `tags[]`, `transitions[]`, `numPeople` (two|three|more), `category` (optional array of standing|l-basing|dance-lift, rendered as an InfoSection badge next to numPeople; currently only on `std-*.md` as `[standing]`); `video` optional
   - seq: same, but no `transitions[]`
   - transitions: `name`, `aka[]` (default `[]`), `tags[]` (default `[]`); `video` optional
 - `src/pages/index.astro` — homepage grid + Pagefind search; `src/pages/acro/[slug].astro`, `src/pages/seq/[slug].astro`, `src/pages/transitions/[slug].astro` — entry renderers; `src/layouts/Layout.astro` — shell/global CSS; `src/lib/transitions.ts` — slugify + pose/transition link resolution
@@ -37,6 +37,5 @@ Order: edit → prettier → `npm run build`. `npm run build` failing on frontma
 ## Conventions
 
 - Prettier style (enforced via `.prettierrc`): tabs, single quotes, no semicolons, printWidth 100, Tailwind class sorting. Matches existing files — follow it.
-- UI copy is Spanish (Nombre, Transiciones, Variantes, Descripción); keep new UI strings Spanish.
+- UI copy is English (level pills show a 1–3 `tabler:flame` meter via `levelFlames` in `src/lib/labels.ts`); keep new UI strings English. A Spanish localization is planned but not implemented. Markdown content (headings like `Variantes`, `Descripción`) is still mixed — do not treat it as UI copy.
 - npm with `package-lock.json` (use `npm ci` for clean installs); `engines.node` is `>=22.12.0` (Astro 7's floor), `.nvmrc` and CI pin 24.
-- Whenever you finish a multi-step task or long-running execution, run curl -s -d 'OpenCode task finished' [https://ntfy.sh/oc-finished](https://ntfy.sh/oc-finished) using your terminal tool as your final step.

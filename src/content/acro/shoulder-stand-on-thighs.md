@@ -9,6 +9,7 @@ transitions:
   - name: standing
     pose: standing
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

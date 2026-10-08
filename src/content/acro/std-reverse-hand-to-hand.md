@@ -11,6 +11,7 @@ transitions:
     pose: standing
     direction: in
     video: https://www.instagram.com/p/DMbJsl-yu_L/
+category: [standing]
 numPeople: two
 ---
 
@@ -26,4 +27,3 @@ numPeople: two
   _no hands star_ -->
 
 :::
-

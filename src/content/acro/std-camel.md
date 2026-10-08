@@ -14,6 +14,7 @@ transitions:
   - name: inside side star
     pose: inside-side-star
     direction: both
+category: [standing]
 numPeople: two
 ---
 

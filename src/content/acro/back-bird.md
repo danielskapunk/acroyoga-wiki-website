@@ -6,6 +6,7 @@ level: easy
 image: './images/acro-back-bird.png'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
+category: [l-basing]
 transitions:
   - name: lean grabing elbows
     pose: standing

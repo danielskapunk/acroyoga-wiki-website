@@ -15,7 +15,7 @@
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
     "@astrojs/markdown-remark": "^7.3.2",
-    "@iconify-json/fa": "^1.2.2",
+    "@iconify-json/tabler": "^1.2.42",
     "astro": "^7.3.6",
     "astro-icon": "^1.2.0",
     "astro-pagefind": "^2.0.1",

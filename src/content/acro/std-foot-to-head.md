@@ -13,6 +13,7 @@ transitions:
   - name: grad hands and step into double high
     pose: std-two-high
     direction: out
+category: [standing]
 numPeople: two
 ---
 

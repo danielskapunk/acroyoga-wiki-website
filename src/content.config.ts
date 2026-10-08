@@ -25,7 +25,8 @@ const acroCollection = defineCollection({
 				)
 				.default([]),
 			tags: z.array(z.string()),
-			numPeople: z.enum(['two', 'three', 'more'])
+			numPeople: z.enum(['two', 'three', 'more']),
+			category: z.array(z.enum(['standing', 'l-basing', 'dance-lift'])).optional()
 		})
 })
 

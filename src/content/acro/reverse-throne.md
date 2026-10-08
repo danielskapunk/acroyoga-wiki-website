@@ -13,6 +13,7 @@ transitions:
   - name: foot to hand
     pose: foot-to-hand
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

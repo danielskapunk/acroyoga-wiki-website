@@ -10,6 +10,7 @@ transitions:
     pose: standing
     direction: both
     video: https://youtu.be/6gTdwKPJGls?t=179
+category: [l-basing]
 numPeople: two
 ---
 

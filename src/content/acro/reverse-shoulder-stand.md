@@ -14,6 +14,7 @@ transitions:
     pose: reverse-bird
     direction: both
     video: https://youtu.be/KcMntJdIUGA?t=27
+category: [l-basing]
 numPeople: two
 ---
 

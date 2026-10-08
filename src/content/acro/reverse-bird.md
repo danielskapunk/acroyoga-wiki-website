@@ -14,6 +14,7 @@ transitions:
   - name: star
     pose: star
     direction: both
+category: [l-basing]
 numPeople: two
 ---
 

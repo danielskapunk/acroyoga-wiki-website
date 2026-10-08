@@ -36,6 +36,7 @@ transitions:
     pose: handstand
     direction: out
     video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
+category: [l-basing]
 numPeople: two
 ---
 

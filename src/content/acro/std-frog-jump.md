@@ -5,6 +5,7 @@ level: easy
 image: './images/frog-jump.png'
 transitions: []
 tags: [move]
+category: [standing]
 numPeople: two
 ---
 

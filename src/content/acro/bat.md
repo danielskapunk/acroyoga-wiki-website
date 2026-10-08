@@ -11,6 +11,7 @@ transitions:
     pose: throne
     direction: both
     video: a
+category: [l-basing]
 numPeople: two
 ---
 

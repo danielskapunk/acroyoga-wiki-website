@@ -1,7 +1,13 @@
 export const levelLabels: Record<string, string> = {
-	easy: '😎 Fácil',
-	medium: '🙂 Medio',
-	hard: '🤯 Difícil'
+	easy: 'Easy',
+	medium: 'Medium',
+	hard: 'Hard'
+}
+
+export const levelFlames: Record<string, number> = {
+	easy: 1,
+	medium: 2,
+	hard: 3
 }
 
 export const levelColors: Record<string, string> = {
@@ -11,9 +17,9 @@ export const levelColors: Record<string, string> = {
 }
 
 export const numPeopleLabels: Record<string, string> = {
-	two: '2 personas',
-	three: '3 personas',
-	more: '3+ personas'
+	two: '2 people',
+	three: '3 people',
+	more: '3+ people'
 }
 
 export const numPeopleShort: Record<string, string> = {

@@ -5,6 +5,7 @@ level: easy
 image: './images/split-lift.png'
 transitions: []
 tags: [move]
+category: [dance-lift]
 numPeople: two
 ---
 

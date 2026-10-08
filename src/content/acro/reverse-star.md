@@ -21,5 +21,6 @@ transitions:
   - name: jump standing without hands
     pose: standing
     direction: out
+category: [l-basing]
 numPeople: two
 ---

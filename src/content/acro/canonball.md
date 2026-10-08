@@ -1,5 +1,5 @@
 ---
-name: Std Cannonball
+name: Cannonball
 aka: [high cannonball]
 level: easy
 image: './images/std-cannonball.png'
@@ -14,6 +14,7 @@ transitions:
   - name: swing hand to hand
     pose: std-hand-to-hand
     direction: out
+category: [standing]
 numPeople: two
 ---
 

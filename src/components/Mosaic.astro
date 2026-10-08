@@ -15,6 +15,7 @@ const items = (Astro.props.items as CollectionEntry<'acro'>[]) || []
 				img={item.data.image}
 				level={item.data.level}
 				people={item.data.numPeople}
+				category={item.data.category ?? []}
 			/>
 		))
 	}

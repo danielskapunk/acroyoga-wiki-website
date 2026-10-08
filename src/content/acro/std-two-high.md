@@ -36,6 +36,7 @@ transitions:
     pose: cannonball-craddle
     direction: out
     video: https://www.instagram.com/p/BlKGTgZnrQU
+category: [standing]
 numPeople: two
 ---
 

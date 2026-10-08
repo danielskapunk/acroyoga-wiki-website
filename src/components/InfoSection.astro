@@ -1,33 +1,47 @@
 ---
 import { Icon } from 'astro-icon/components'
 import type { CollectionEntry } from 'astro:content'
-import { levelColors, levelLabels, numPeopleLabels } from '../lib/labels'
+import { levelColors, levelFlames, levelLabels, numPeopleLabels } from '../lib/labels'
 const entry = (Astro.props.data as CollectionEntry<'acro'>) || {}
 const level = levelLabels[entry.data.level] ?? entry.data.level
+const flames = levelFlames[entry.data.level] ?? 1
 const numPeople = numPeopleLabels[entry.data.numPeople] ?? entry.data.numPeople
 ---
 
 <div class="flex flex-wrap items-center gap-2 rounded-2xl bg-white/80 p-3 shadow sm:gap-3 sm:p-4">
 	<span
-		class={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${
+		class={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold ${
 			levelColors[entry.data.level] ?? 'bg-gray-200 text-gray-700'
 		}`}
 	>
+		<span class="sr-only">Level: {level}</span>
+		<span class="flex -space-x-1" aria-hidden="true">
+			{Array.from({ length: flames }).map((_) => <Icon name="tabler:flame" class="h-3.5 w-auto" />)}
+		</span>
 		{level}
 	</span>
 
 	<span
 		class="inline-flex items-center gap-1.5 rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
 	>
-		<Icon name="fa:user" class="h-3.5 w-auto" />
+		<Icon name="tabler:user" class="h-3.5 w-auto" />
 		{numPeople}
 	</span>
 
 	{
+		entry.data.category?.length > 0 && (
+			<span class="inline-flex items-center gap-1.5 rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">
+				<Icon name="tabler:arrow-up" class="h-3.5 w-auto" />
+				{entry.data.category.join(', ')}
+			</span>
+		)
+	}
+
+	{
 		entry.data.aka.length > 0 && (
 			<span class="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full bg-slate-200 px-3 py-1 text-sm text-slate-700">
-				<Icon name="fa:tag" class="h-3.5 w-auto" />
-				<span class="font-semibold">Otros Nombres: </span>
+				<Icon name="tabler:tag" class="h-3.5 w-auto" />
+				<span class="font-semibold">Other Names: </span>
 				{entry.data.aka.join(', ')}
 			</span>
 		)

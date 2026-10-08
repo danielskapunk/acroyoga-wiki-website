@@ -21,6 +21,7 @@ transitions:
     pose: standing
     direction: out
     video: https://youtu.be/bvFA6olSYq4?t=8
+category: [standing]
 numPeople: two
 ---
 

@@ -19,6 +19,7 @@ transitions:
     pose: base-lying
     direction: both
     video: https://youtu.be/h3QOaD59phY?t=181
+category: [standing]
 numPeople: two
 ---
 

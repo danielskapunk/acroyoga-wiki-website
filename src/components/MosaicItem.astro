@@ -7,22 +7,24 @@ interface Props {
 	p: string
 	level: string
 	people: string
+	category: string[]
 }
 
-const { title, img, p, level, people } = Astro.props
+const { title, img, p, level, people, category } = Astro.props
 ---
 
 <article
 	class="m-0 grid grid-cols-2 grid-rows-[250px] items-center bg-zinc-900 pb-2 text-center"
 	data-level={level}
 	data-people={people}
+	data-category={category.join(' ')}
 >
 	<h2 class="col-span-2 mb-0 pt-1">
 		<a class="!text-white" href={p}>{title}</a>
 	</h2>
 
 	<div class="order-first col-span-2">
-		<a href={p}><Image class="h-64 w-full object-cover" src={img} alt="imagen del truco" /></a>
+		<a href={p}><Image class="h-64 w-full object-cover" src={img} alt="trick image" /></a>
 	</div>
 </article>
 

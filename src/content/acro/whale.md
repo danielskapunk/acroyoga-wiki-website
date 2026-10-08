@@ -21,6 +21,7 @@ transitions:
     pose: floor-handstand
     direction: both
     video: https://youtu.be/4WMAZ67brUc?t=117
+category: [l-basing]
 numPeople: two
 ---
 

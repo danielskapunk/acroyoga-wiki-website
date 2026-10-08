@@ -5,6 +5,7 @@ level: easy
 image: './images/black.png'
 transitions: []
 tags: [move]
+category: [standing]
 numPeople: two
 ---
 

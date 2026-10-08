@@ -10,6 +10,7 @@ transitions:
   - name: standing
     pose: standing
     direction: both
+category: [standing]
 numPeople: two
 ---
 

@@ -23,5 +23,6 @@ transitions:
   - name: hand to hand
     pose: std-hand-to-hand
     direction: both
+category: [standing]
 numPeople: two
 ---

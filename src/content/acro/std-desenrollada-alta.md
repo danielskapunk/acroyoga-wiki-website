@@ -6,6 +6,7 @@ image: './images/std-couch.jpg'
 video: https://www.youtube.com/watch?v=KuCPwI0GfNQ&t=55s
 transitions: []
 tags: [move]
+category: [dance-lift]
 numPeople: two
 ---
 
