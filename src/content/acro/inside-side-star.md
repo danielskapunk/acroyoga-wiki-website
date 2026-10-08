@@ -5,10 +5,11 @@ aka: []
 level: easy
 image: './images/acroyoga-inside-side-star.jpeg'
 tags: []
-to:
-  - pose: Reverse Shin to Foot
-    slug: reverse-shin-to-foot
-    video: 'https://youtu.be/1RvCbJ_IqCM?t=100'
+transitions:
+  - name: reverse shin to foot
+    pose: reverse-shin-to-foot
+    direction: both
+    video: https://youtu.be/1RvCbJ_IqCM?t=100
 numPeople: two
 ---
 

@@ -3,7 +3,7 @@ name: Propeller
 aka: [Ventilador]
 level: easy
 image: './images/black.png'
-to: []
+transitions: []
 tags: [move]
 numPeople: two
 ---

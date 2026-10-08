@@ -5,15 +5,15 @@ aka: [palomita reversa]
 level: easy
 image: './images/acroyoga-reverse-bird.jpeg'
 tags: []
-to:
-  - pose: Back Bird
-    slug: back-bird
-    video: 'https://youtu.be/BW0e3TwUd3U?t=17'
+transitions:
+  - name: back bird
+    pose: back-bird
+    direction: both
+    video: https://youtu.be/BW0e3TwUd3U?t=17
 
-  - pose: Star
-    slug: star
-    video: ''
-
+  - name: star
+    pose: star
+    direction: both
 numPeople: two
 ---
 

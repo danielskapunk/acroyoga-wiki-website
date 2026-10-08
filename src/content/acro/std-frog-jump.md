@@ -3,7 +3,7 @@ name: Frog Jump
 aka: []
 level: easy
 image: './images/frog-jump.png'
-to: []
+transitions: []
 tags: [move]
 numPeople: two
 ---

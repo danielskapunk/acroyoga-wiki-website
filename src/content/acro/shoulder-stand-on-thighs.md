@@ -5,11 +5,10 @@ level: easy
 image: './images/acroyoga-shoulder-stand-on-thighs.jpeg'
 video: ''
 tags: [standing, dance-lifts]
-to:
-  - pose: Standing
-    slug: ''
-    video: ''
-
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
 numPeople: two
 ---
 

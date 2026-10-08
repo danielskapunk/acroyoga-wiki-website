@@ -5,43 +5,51 @@ aka: [palomita, pajaro, pajarito]
 level: easy
 image: './images/bird-acroyoga.png'
 tags: []
-to:
-  - pose: flyer standing
-    slug: ''
+transitions:
+  - name: flyer standing
+    pose: flyer-standing
+    direction: both
     video: https://www.youtube.com/watch?v=r6q8JxAUfh4&t=6s
 
-  - pose: Shoulder Stand
-    slug: shoulder-stand
+  - name: shoulder stand
+    pose: shoulder-stand
+    direction: both
     video: https://www.youtube.com/watch?v=aXDDjqyc6ao
 
-  - pose: Side Star (no hands)
-    slug: reverse-inside-side-star
+  - name: side star (no hands)
+    pose: reverse-inside-side-star
+    direction: both
     video: https://youtu.be/g6XH0ZO241c?t=10
 
-  - pose: Low Bird
-    slug: low-bird
+  - name: low bird
+    pose: low-bird
+    direction: both
     video: https://www.youtube.com/watch?v=bGOsc7Fg3U8
 
-  - pose: Reverse Star
-    slug: reverse-star
+  - name: reverse star
+    pose: reverse-star
+    direction: both
     video: https://youtu.be/vccFNDI6y74?t=28
 
-  - pose: (pop) Reverse Star
-    slug: reverse-star
+  - name: pop reverse star
+    pose: reverse-star
+    direction: out
     video: https://photos.app.goo.gl/jH5r6E9nLjRFxV3c7
 
-  - pose: Star
-    slug: star
+  - name: star
+    pose: star
+    direction: both
     video: https://youtu.be/lw88JUFB2Ok?t=29
 
-  - pose: (pop) Star
-    slug: star
+  - name: pop star
+    pose: star
+    direction: out
     video: https://www.youtube.com/watch?v=ESTQVir4LbA&list=UUZkIAsA8JGmM4IiRSZm6kFw&index=112
 
-  - pose: Throne
-    slug: throne
+  - name: throne
+    pose: throne
+    direction: both
     video: https://youtu.be/iRr1UmNFFh0?t=28
-
 numPeople: two
 ---
 

@@ -5,11 +5,21 @@ aka: [estrellita reversa]
 level: easy
 image: './images/acroyoga-reverse-star.webp'
 tags: []
-to:
-  - pose: whale
-  - pose: low straddle throne
-  - pose: (jump) standing with hands
-  - pose: (jump) standing without hands
+transitions:
+  - name: whale
+    pose: whale
+    direction: both
 
+  - name: low straddle throne
+    pose: low-straddle-throne
+    direction: both
+
+  - name: jump standing with hands
+    pose: standing
+    direction: out
+
+  - name: jump standing without hands
+    pose: standing
+    direction: out
 numPeople: two
 ---

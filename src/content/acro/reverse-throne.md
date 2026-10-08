@@ -5,15 +5,14 @@ level: easy
 image: './images/acroyoga-reverse-throne.jpeg'
 video: IMeQHShkge0
 tags: []
-to:
-  - pose: Back Bird
-    slug: back-bird
-    video: ''
+transitions:
+  - name: back bird
+    pose: back-bird
+    direction: both
 
-  - pose: Foot to Hand
-    slug: foot-to-hand
-    video: ''
-
+  - name: foot to hand
+    pose: foot-to-hand
+    direction: both
 numPeople: two
 ---
 

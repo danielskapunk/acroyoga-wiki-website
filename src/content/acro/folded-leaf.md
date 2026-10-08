@@ -5,11 +5,11 @@ aka: [hoja doblada]
 level: easy
 image: './images/Folded-Leaf.jpeg'
 tags: []
-to:
-  - pose: Bird
-    slug: 'bird'
-    video: 'https://youtu.be/1RvCbJ_IqCM?t=100'
-
+transitions:
+  - name: bird
+    pose: bird
+    direction: both
+    video: https://youtu.be/1RvCbJ_IqCM?t=100
 numPeople: two
 ---
 

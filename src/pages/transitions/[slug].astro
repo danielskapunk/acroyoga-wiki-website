@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+	const transitionEntries = await getCollection('transitions')
+	return transitionEntries.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry }
+	}))
+}
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<Layout title={entry.data.name}>
+	<article class="bg-gray-300 pb-4">
+		<h1 class="text-center font-display text-3xl font-bold">{entry.data.name}</h1>
+
+		<section class="pl-4 pr-4">
+			{
+				entry.data.aka.length > 0 && (
+					<div class="py-1">
+						<span class="font-bold">Otros Nombres: </span>
+						{entry.data.aka.join(', ')}
+					</div>
+				)
+			}
+			{
+				entry.data.video && (
+					<div class="py-1">
+						<a href={entry.data.video}>video</a>
+					</div>
+				)
+			}
+			<Content />
+		</section>
+	</article>
+</Layout>

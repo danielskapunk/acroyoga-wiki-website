@@ -4,15 +4,14 @@ aka: []
 level: easy
 image: './images/acroyoga-shin-to-foot.jpeg'
 tags: []
-to:
-  - pose: Bird
-    slug: bird
-    video: ''
+transitions:
+  - name: bird
+    pose: bird
+    direction: both
 
-  - pose: Throne
-    slug: throne
-    video: ''
-
+  - name: throne
+    pose: throne
+    direction: both
 numPeople: two
 ---
 

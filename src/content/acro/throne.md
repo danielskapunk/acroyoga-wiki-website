@@ -5,47 +5,48 @@ level: easy
 image: './images/acroyoga-throne.jpeg'
 video: Mz_P0UzoBbk
 tags: []
-to:
-  - pose: Reverse Foot to Hand
-    slug: reverse-foot-to-hand
-    video: ''
+transitions:
+  - name: reverse foot to hand
+    pose: reverse-foot-to-hand
+    direction: both
 
-  - pose: Whale
-    slug: whale
+  - name: whale
+    pose: whale
+    direction: both
     video: https://youtu.be/FKocikVTzHM?t=171
 
-  - pose: Mono Throne
-    slug: mono-throne
-    video: ''
+  - name: mono throne
+    pose: mono-throne
+    direction: both
 
-  - pose: Foot to Shin
-    slug: foot-to-shin
-    video: ''
+  - name: foot to shin
+    pose: foot-to-shin
+    direction: both
 
-  - pose: Shin to Hand
-    slug: shin-to-hand
-    video: ''
+  - name: shin to hand
+    pose: shin-to-hand
+    direction: both
 
-  - pose: Bird
-    slug: bird
+  - name: bird
+    pose: bird
+    direction: both
     video: https://youtu.be/iRr1UmNFFh0?t=28
 
-  - pose: Outside Side Star
-    slug: outside-side-star
-    video: ''
+  - name: outside side star
+    pose: outside-side-star
+    direction: both
 
-  - pose: Foot to Foot
-    slug: foot-to-foot
-    video: ''
+  - name: foot to foot
+    pose: foot-to-foot
+    direction: both
 
-  - pose: Reverse Back Bird
-    slug: reverse-back-bird
-    video: ''
+  - name: reverse back bird
+    pose: reverse-back-bird
+    direction: both
 
-  - pose: Foot to Hand
-    slug: foot-to-hand
-    video: ''
-
+  - name: foot to hand
+    pose: foot-to-hand
+    direction: both
 numPeople: two
 ---
 

@@ -1,22 +1,26 @@
 ---
 # layout: ../../layouts/Trick.astro
 name: Std Bicep Stand
+shortName: bicep stand
 aka: [high bicep stand]
 level: easy
 image: './images/std-bicep-stand.png'
 tags: []
-to:
-  - pose: Standing
-    video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
+    video: https://www.instagram.com/reel/C0SGEa9y6Vv
 
-  - pose: Croc
-    slug: std-croc
-    video: 'https://www.instagram.com/reel/C0SGEa9y6Vv'
+  - name: croc
+    pose: std-croc
+    direction: both
+    video: https://www.instagram.com/reel/C0SGEa9y6Vv
 
-  - pose: (roll down) Standing
+  - name: roll down standing
+    pose: standing
+    direction: out
     video: https://youtu.be/bvFA6olSYq4?t=8
-    canGoBack: false
-
 numPeople: two
 ---
 

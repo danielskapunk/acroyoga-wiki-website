@@ -1,23 +1,30 @@
 ---
 name: Std Bird
+shortName: bird
 aka: [high bird]
 level: easy
 image: './images/std-bird.png'
 tags: []
-to:
-  - pose: (pop) Std Back Bird
-    slug: ''
-    video: 'https://youtu.be/M9sudvsHBp4?t=7'
-  - pose: (swing) Rock and Roll
-    slug: ''
-    video: 'https://youtu.be/M9sudvsHBp4?t=7'
-  - pose: Buffet
-    slug: ''
-    video: 'https://www.instagram.com/reel/C0ppk7NPnwL'
-  - pose: Handstand on Floor (Jaeger)
-    slug: ''
-    video: 'https://www.instagram.com/p/BuqrSUxlcIO'
+transitions:
+  - name: pop std back bird
+    pose: std-back-bird
+    direction: out
+    video: https://youtu.be/M9sudvsHBp4?t=7
 
+  - name: swing rock and roll
+    pose: rock-and-roll
+    direction: out
+    video: https://youtu.be/M9sudvsHBp4?t=7
+
+  - name: buffet
+    pose: buffet
+    direction: both
+    video: https://www.instagram.com/reel/C0ppk7NPnwL
+
+  - name: handstand on floor (jaeger)
+    pose: handstand
+    direction: out
+    video: https://www.instagram.com/p/BuqrSUxlcIO
 numPeople: two
 ---
 

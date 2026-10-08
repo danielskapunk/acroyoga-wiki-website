@@ -3,7 +3,7 @@ name: Front Spring
 aka: []
 level: easy
 image: './images/black.png'
-to: []
+transitions: []
 tags: [move]
 numPeople: two
 ---

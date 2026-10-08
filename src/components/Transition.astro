@@ -1,25 +1,50 @@
 ---
-import { Icon } from 'astro-icon/components'
-const { data, from } = Astro.props
-// const arrow = (b:boolean)=>{
-// 	return b ? <FaLongArrowAltLeft class='fa-icon' /> : <FaLongArrowAltRight class='fa-icon' />
-// }
+import type { TransitionContext } from '../lib/transitions'
+
+interface TransitionEntry {
+	name: string
+	aka: string[]
+	pose: string
+	direction: 'in' | 'out' | 'both'
+	slug?: string
+	video?: string
+}
+
+interface Props {
+	title: string
+	mode: 'in' | 'out'
+	current: string
+	data: TransitionEntry[]
+	ctx: TransitionContext
+}
+
+const { title, mode, current, data, ctx } = Astro.props
 ---
 
-<ul>
-	{
-		data.map((d) => (
-			<li class="grid grid-cols-[auto_60px_1fr_65px] ">
-				<div>{from}</div>
-				<div class="flex justify-center ">
-					{' '}
-					<Icon name="fa:arrow-left" class={`w-2 ${d.canGoBack ? '' : 'invisible'}`} />{' '}
-					<Icon name="fa:arrow-right" class="w-2" />{' '}
-				</div>
-				{d.slug && <a href={`/acro/${d.slug}`}>{d.pose}</a>}
-				{!d.slug && d.pose}
-				{d.video && <a href={d.video}>video</a>}
-			</li>
-		))
-	}
-</ul>
+<section>
+	<h3>{title}</h3>
+	<ul>
+		{
+			data.map((t) => {
+				const pose = ctx.poseInfo(t.pose)
+				const transition = ctx.transitionInfo(t)
+				const source = mode === 'in' ? pose : { label: current, href: null }
+				const dest = mode === 'in' ? { label: current, href: null } : pose
+				return (
+					<li class="flex flex-wrap items-center gap-2 py-0.5">
+						<span>{source.label}</span>
+						<span aria-hidden="true">→</span>
+						{transition.href ? (
+							<a href={transition.href}>{transition.label}</a>
+						) : (
+							<span>{transition.label}</span>
+						)}
+						<span aria-hidden="true">→</span>
+						{dest.href ? <a href={dest.href}>{dest.label}</a> : <span>{dest.label}</span>}
+						{t.video && <a href={t.video}>video</a>}
+					</li>
+				)
+			})
+		}
+	</ul>
+</section>

@@ -6,37 +6,40 @@ level: easy
 image: './images/acro-back-bird.png'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
-to:
-  - pose: Standing
-    slug: ''
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
     video: https://youtu.be/qa5iG6k3W0s?t=36
 
-  - pose: Reverse Shoulder Stand
-    slug: reverse-shoulder-stand
+  - name: reverse shoulder stand
+    pose: reverse-shoulder-stand
+    direction: both
     video: https://youtu.be/KcMntJdIUGA?t=24
 
-  - pose: Bat
-    slug: bat
-    video: ''
+  - name: bat
+    pose: bat
+    direction: both
 
-  - pose: Inside Side Star
-    slug: inside-side-star
+  - name: inside side star
+    pose: inside-side-star
+    direction: both
     video: https://youtu.be/BW0e3TwUd3U?t=17
 
-  - pose: (inside side star) Reverse Bird
-    slug: reverse-bird
+  - name: inside side star reverse bird
+    pose: reverse-bird
+    direction: both
     video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
 
-  - pose: (pop) Reverse Bird
-    slug: reverse-bird
+  - name: pop reverse bird
+    pose: reverse-bird
+    direction: out
     video: https://youtu.be/UekRYMSAfmQ?t=11
-    canGoBack: false
 
-  - pose: (pop) Hand to Hand (base sit up)
-    slug: hand-to-hand
+  - name: pop hand to hand (base sit up)
+    pose: std-hand-to-hand
+    direction: out
     video: https://www.instagram.com/reel/CilssW2DhN6
-    canGoBack: false
-
 numPeople: two
 ---
 

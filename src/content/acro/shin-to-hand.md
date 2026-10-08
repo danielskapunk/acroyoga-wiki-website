@@ -4,23 +4,22 @@ aka: []
 level: easy
 image: './images/acroyoga-shin-to-hand.jpeg'
 tags: []
-to:
-  - pose: Back Bird
-    slug: back-bird
-    video: ''
+transitions:
+  - name: back bird
+    pose: back-bird
+    direction: both
 
-  - pose: Bird
-    slug: bird
-    video: ''
+  - name: bird
+    pose: bird
+    direction: both
 
-  - pose: Throne
-    slug: throne
-    video: ''
+  - name: throne
+    pose: throne
+    direction: both
 
-  - pose: Whale
-    slug: whale
-    video: ''
-
+  - name: whale
+    pose: whale
+    direction: both
 numPeople: two
 ---
 

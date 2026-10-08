@@ -1,16 +1,19 @@
 ---
 name: Std Camel
+shortName: camel
 aka: [high camel]
 level: easy
 image: './images/std-camel.png'
 tags: []
-to:
-  - pose: standing
-    slug: ''
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
     video: https://youtu.be/t7cqdEHLq7A?t=15
-  - pose: inside side star
-    slug: ''
-    video: ''
+
+  - name: inside side star
+    pose: inside-side-star
+    direction: both
 numPeople: two
 ---
 

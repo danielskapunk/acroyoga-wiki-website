@@ -1,71 +1,88 @@
 ---
 name: Std Hand to Hand
+shortName: h2h
 aka: [H2H, mano a mano]
 level: medium
 image: './images/acro-hand-to-hand.jpeg'
 video: 'https://youtu.be/X9XESe_B7Ow'
 tags: []
-to:
-  - pose: cast relocate
-    slug: ''
-    video: https://www.instagram.com/p/DMbJsl-yu_L/
-
-  - pose: pacheska/inlocate
-    slug: ''
+transitions:
+  - name: pacheska
+    aka: [pacheska, podcheska, inlocate]
+    pose: standing
+    direction: in
     video: https://www.instagram.com/reel/C0PQfRPx9C5
 
-  - pose: forearm pop
-    slug: ''
+  - name: forearm pop
+    pose: standing
+    direction: both
     video: https://youtu.be/X9XESe_B7Ow?t=31
 
-  - pose: std h2h chair / princesa
-    slug: std-hand-to-hand-chair
+  - name: std h2h chair
+    aka: [princess]
+    pose: std-hand-to-hand-chair
+    direction: out
     video: https://youtu.be/68fdEP5tacY?t=43
 
-  - pose: high straddle chair
-    slug: 'std-hand-to-hand-chair'
+  - name: high straddle chair
+    pose: std-hand-to-hand-chair
+    direction: out
     video: https://youtu.be/X9XESe_B7Ow?t=80
 
-  - pose: canonball
-    slug: ''
+  - name: cannonball
+    pose: standing
+    direction: in
     video: https://youtu.be/X9XESe_B7Ow?t=113
 
-  - pose: drag up
-    slug: ''
+  - name: drag up
+    pose: standing
+    direction: in
     video: https://www.instagram.com/p/Bm3g6xFFxYx
 
-  - pose: craddle
-    slug: craddle
+  - name: craddle dismount
+    pose: craddle
+    direction: out
     video: https://youtu.be/0vtAzETB6pk?t=47
 
-  - pose: penguin (drop)
-    slug: ''
+  - name: penguin drop
+    pose: standing
+    direction: out
     video: https://youtu.be/VodvHIuV-8o?t=265
-    canGoBack: false
 
-  - pose: calf pop
-    slug: ''
+  - name: calf pop
+    pose: standing
+    direction: out
     video: https://youtu.be/X9XESe_B7Ow?t=98
-  - pose: leg pop
-    slug: ''
+
+  - name: leg pop
+    pose: standing
+    direction: out
     video: https://www.instagram.com/p/Bvtq75PBmdN/
-  - pose: roll back dismount
-    slug: ''
+
+  - name: roll back dismount
+    pose: standing
+    direction: out
     video: https://www.youtube.com/watch?v=PPFXjTymSL4
 
-  - pose: half kamikaze dismount
-    slug: ''
+  - name: half kamikaze dismount
+    pose: standing
+    direction: out
     video: https://www.instagram.com/p/BvAwlNml1xd/
 
-  - pose: diamodov
+  - name: diamodov
+    pose: standing
+    direction: out
     video: https://www.instagram.com/p/DL-16_WyIhZ/
 
-  - pose: courbet
+  - name: courbet
+    pose: standing
+    direction: out
     video: https://www.instagram.com/p/DLvLyD0Sqmy/
-  
-  - pose: cascade
-    video: https://www.instagram.com/p/DLNk9PnuwUB/
 
+  - name: cascade
+    pose: standing
+    direction: out
+    video: https://www.instagram.com/p/DLNk9PnuwUB/
 numPeople: two
 ---
 

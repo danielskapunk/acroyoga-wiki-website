@@ -5,6 +5,7 @@ import { getCollection, render } from 'astro:content'
 import InfoSection from '../../components/InfoSection.astro'
 import Transition from '../../components/Transition.astro'
 import Layout from '../../layouts/Layout.astro'
+import { buildTransitionContext } from '../../lib/transitions'
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -23,6 +24,11 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props
 const { Content } = await render(entry)
+const ctx = await buildTransitionContext()
+const into = entry.data.transitions.filter((t) => t.direction === 'in' || t.direction === 'both')
+const from = entry.data.transitions.filter((t) => t.direction === 'out' || t.direction === 'both')
+const currentLabel =
+	entry.data.shortName && entry.data.shortName.trim() ? entry.data.shortName : entry.data.name
 var params = ''
 try {
 	let url = new URL(entry.data.video || '')
@@ -42,8 +48,28 @@ try {
 		<InfoSection data={entry} />
 
 		<section class="pl-4 pr-4">
-			<h3>Transiciones</h3>
-			<Transition from={entry.data.name} data={entry.data.to} />
+			{
+				into.length > 0 && (
+					<Transition
+						title={`Transiciones hacia ${entry.data.name}`}
+						mode="in"
+						current={currentLabel}
+						data={into}
+						ctx={ctx}
+					/>
+				)
+			}
+			{
+				from.length > 0 && (
+					<Transition
+						title={`Transiciones desde ${entry.data.name}`}
+						mode="out"
+						current={currentLabel}
+						data={from}
+						ctx={ctx}
+					/>
+				)
+			}
 
 			<h3>Imagen</h3>
 			<Image

@@ -5,13 +5,15 @@ level: easy
 image: './images/std-cannonball.png'
 video: 'https://youtu.be/68fdEP5tacY?t=78'
 tags: []
-to:
-  - pose: (swing) standing
-    slug: ''
-    video: 'https://youtu.be/U32KQZU4cjw?t=9'
-  - pose: (swing) hand to hand
-    slug: 'std-hand-to-hand'
-    video: ''
+transitions:
+  - name: swing standing
+    pose: standing
+    direction: out
+    video: https://youtu.be/U32KQZU4cjw?t=9
+
+  - name: swing hand to hand
+    pose: std-hand-to-hand
+    direction: out
 numPeople: two
 ---
 

@@ -5,10 +5,11 @@ aka: []
 level: easy
 image: './images/bird-sandwich.png'
 tags: []
-to:
-  - pose: standing
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
     video: https://youtu.be/QBtsayE8px8?t=18
-
 numPeople: three
 ---
 

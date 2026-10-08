@@ -4,16 +4,24 @@ aka: []
 level: easy
 image: './images/bicep-stand.jpeg'
 tags: []
-to:
-  - pose: croc
+transitions:
+  - name: croc
+    pose: std-croc
+    direction: both
     video: https://youtu.be/Ufg63Tq3tuA?t=11
-  - pose: Reverse Star
-    slug: reverse-star
-  - pose: Foot to Hand
-    slug: foot-to-hand
+
+  - name: reverse star
+    pose: reverse-star
+    direction: both
+
+  - name: foot to hand
+    pose: foot-to-hand
+    direction: both
     video: https://youtu.be/18U9fdj9ueQ?t=5
-  - pose: Inside Side Star
-    slug: inside-side-star
+
+  - name: inside side star
+    pose: inside-side-star
+    direction: both
     video: https://youtu.be/18U9fdj9ueQ?t=71
 numPeople: two
 ---

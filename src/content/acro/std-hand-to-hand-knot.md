@@ -1,15 +1,16 @@
 ---
 name: Std Hand to Hand Knot
+shortName: h2h knot
 aka: [knot, nudito]
 level: medium
 image: './images/std-knot.png'
 video: 'https://youtu.be/68fdEP5tacY?t=117'
 tags: []
-to:
-  - pose: hand to hand
-    slug: 'std-hand-to-hand'
+transitions:
+  - name: hand to hand
+    pose: std-hand-to-hand
+    direction: both
     video: https://youtu.be/68fdEP5tacY?t=117
-
 numPeople: two
 ---
 

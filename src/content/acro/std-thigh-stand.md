@@ -1,16 +1,24 @@
 ---
 name: Thigh Stand
+shortName: thigh stand
 aka: [chair]
 level: easy
 image: './images/std-thigh-stand.jpg'
 tags: []
-to:
-  - pose: (step up) standing
-  - pose: Flyer lying
-    video: https://youtu.be/Npn7gM6iVe0?t=7
-  - pose: Base lying
-    video: https://youtu.be/h3QOaD59phY?t=181
+transitions:
+  - name: step up standing
+    pose: standing
+    direction: out
 
+  - name: flyer lying
+    pose: flyer-lying
+    direction: both
+    video: https://youtu.be/Npn7gM6iVe0?t=7
+
+  - name: base lying
+    pose: base-lying
+    direction: both
+    video: https://youtu.be/h3QOaD59phY?t=181
 numPeople: two
 ---
 

@@ -4,14 +4,16 @@ aka: []
 level: easy
 image: './images/acroyoga-reverse-shoulder-stand.webp'
 tags: []
-to:
-  - pose: Back Bird
-    slug: back-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=25'
-  - pose: Reverse Bird
-    slug: reverse-bird
-    video: 'https://youtu.be/KcMntJdIUGA?t=27'
+transitions:
+  - name: back bird
+    pose: back-bird
+    direction: both
+    video: https://youtu.be/KcMntJdIUGA?t=25
 
+  - name: reverse bird
+    pose: reverse-bird
+    direction: both
+    video: https://youtu.be/KcMntJdIUGA?t=27
 numPeople: two
 ---
 

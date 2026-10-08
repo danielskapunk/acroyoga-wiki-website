@@ -6,11 +6,11 @@ level: easy
 image: './images/acroyoga-bat.jpeg'
 video: mwETRw_OOXs
 tags: []
-to:
-  - pose: Throne
-    slug: throne
+transitions:
+  - name: throne
+    pose: throne
+    direction: both
     video: a
-
 numPeople: two
 ---
 

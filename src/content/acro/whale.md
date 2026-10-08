@@ -6,19 +6,21 @@ level: easy
 image: './images/acroyoga-whale.jpeg'
 video: 4WMAZ67brUc
 tags: []
-to:
-  - pose: Standing
-    slug: ''
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
     video: https://youtu.be/4WMAZ67brUc?t=25
 
-  - pose: (pop) Throne
-    slug: throne
+  - name: pop throne
+    pose: throne
+    direction: out
     video: https://youtu.be/FKocikVTzHM?t=41
 
-  - pose: Floor Handstand
-    slug: ''
+  - name: floor handstand
+    pose: floor-handstand
+    direction: both
     video: https://youtu.be/4WMAZ67brUc?t=117
-
 numPeople: two
 ---
 

@@ -6,24 +6,36 @@ level: easy
 image: './images/craddle.png'
 video: ''
 tags: [standing]
-to:
-  - pose: Standing
-    slug: ''
-    video: ''
-  - pose: (twist 360) craddle
-    slug: ''
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
+
+  - name: twist 360 craddle
+    pose: craddle
+    direction: out
     video: https://youtu.be/7dDnUH27FDg?t=69
-  - pose: (twist 720) craddle
-    slug: ''
+
+  - name: twist 720 craddle
+    pose: craddle
+    direction: out
     video: https://youtu.be/zi6paWvpivM?t=33
-  - pose: (scarf) craddle
-    slug: craddle
+
+  - name: scarf craddle
+    pose: craddle
+    direction: both
     video: https://www.youtube.com/watch?v=6bZ2ha5A_Po
-  - pose: (split lift) standing
-    video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
-  - pose: (handstand dismount) handstand or standing
+
+  - name: split lift standing
+    pose: standing
+    direction: out
     video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
 
+  - name: handstand dismount
+    aka: [handstand or standing]
+    pose: handstand
+    direction: out
+    video: https://photos.app.goo.gl/XGZNpNYF8ACRNe6E7
 numPeople: two
 ---
 

@@ -17,10 +17,12 @@ Order: edit → prettier → `npm run build`. `npm run build` failing on frontma
 
 - `src/content/acro/*.md` — poses → route `/acro/<filename>` (e.g. `bird.md` → `/acro/bird`); images colocated in `src/content/acro/images/`
 - `src/content/seq/*.md` — sequences → route `/seq/<filename>`
+- `src/content/transitions/*.md` — transition pages → route `/transitions/<filename>`; currently empty (the collection + route exist, links activate when a file appears)
 - `src/content.config.ts` — Content Layer collections (`glob()` loaders, `z` from `astro/zod`). Build fails on invalid frontmatter:
-  - acro: `name`, `aka[]`, `level` (easy|medium|hard), `image` (relative path, ≥600px wide enforced in `getStaticPaths`, not the schema), `tags[]`, `to[]`, `numPeople` (two|three|more); `video` optional
-  - seq: same, but no `to[]`
-- `src/pages/index.astro` — homepage grid + Pagefind search; `src/pages/acro/[slug].astro`, `src/pages/seq/[slug].astro` — entry renderers; `src/layouts/Layout.astro` — shell/global CSS
+  - acro: `name`, `shortName` (optional), `aka[]`, `level` (easy|medium|hard), `image` (relative path, ≥600px wide enforced in `getStaticPaths`, not the schema), `tags[]`, `transitions[]`, `numPeople` (two|three|more); `video` optional
+  - seq: same, but no `transitions[]`
+  - transitions: `name`, `aka[]` (default `[]`), `tags[]` (default `[]`); `video` optional
+- `src/pages/index.astro` — homepage grid + Pagefind search; `src/pages/acro/[slug].astro`, `src/pages/seq/[slug].astro`, `src/pages/transitions/[slug].astro` — entry renderers; `src/layouts/Layout.astro` — shell/global CSS; `src/lib/transitions.ts` — slugify + pose/transition link resolution
 - `astro.config.mjs` — registers a custom `remark-directive` plugin: markdown `:::section{.variantes}` becomes an HTML `<section>` (styled by the global CSS at the bottom of `src/pages/acro/[slug].astro`)
 
 ## Gotchas
@@ -29,8 +31,8 @@ Order: edit → prettier → `npm run build`. `npm run build` failing on frontma
 - **Deploy config is contradictory** and neither side is self-consistent: `.github/workflows/deploy.yml` publishes to GitHub Pages on push to `main`, but `site`/`base` are commented out in `astro.config.mjs` (needed for a `/acroyoga-wiki-website` project-page subpath), while `vercel.json` (`cleanUrls`) + `.vercel/` point at a Vercel deploy. Don't uncomment `site`/`base`, and don't delete either deploy file, without asking — builds are unaffected either way.
 - `build.format: 'file'` → `dist/acro/bird.html`, not `bird/index.html`.
 - **Two search implementations exist.** The real one is Pagefind (`astro-pagefind`), whose index only exists after `npm run build` (`dist/pagefind`). `src/pages/search.astro` is an unfinished fuse.js experiment (hardcoded `fuse.search('ird')`, renders an empty mosaic) — don't wire it up as if it were the product.
-- Transitions (`to[]`) render as a link **only when `slug` is set**, and it must equal the target file's name without `.md`; empty slug → plain text. `canGoBack` defaults to `true` and only toggles an arrow icon.
-- YouTube URLs in `video`/`to[].video` may carry `?t=`/`&start=`; `src/pages/acro/[slug].astro` parses them into the embed `start` param.
+- Transitions are **local to the pose page being edited** (`transitions[]` frontmatter): each entry has `name`, optional `aka[]`, `pose` (slug of the _other_ pose — required), `direction` relative to this pose (`in` = other → here, `out` = here → other, `both` = both sections), optional `slug` (transition-page slug override, else derived from `name` via slugify), optional `video`. No graph/normalization — don't add one. A `pose` links to `/acro/<slug>` only when that page exists, else renders as prettified text; a transition `name` links to `/transitions/<slug>` only when `src/content/transitions/<slug>.md` exists (slugify: lowercase, non-alphanumerics → `-`). `aka` renders only on the transition page.
+- YouTube URLs in `video`/`transitions[].video` may carry `?t=`/`&start=`; `src/pages/acro/[slug].astro` parses them into the embed `start` param.
 
 ## Conventions
 

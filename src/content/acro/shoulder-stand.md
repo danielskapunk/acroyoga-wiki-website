@@ -5,19 +5,18 @@ level: easy
 image: './images/acroyoga-shoulder-stand.jpeg'
 video: ''
 tags: [standing, dance-lifts]
-to:
-  - pose: Standing
-    slug: ''
-    video: ''
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
 
-  - pose: Bird
-    slug: 'bird'
-    video: ''
+  - name: bird
+    pose: bird
+    direction: both
 
-  - pose: Back Bird
-    slug: 'back-bird'
-    video: ''
-
+  - name: back bird
+    pose: back-bird
+    direction: both
 numPeople: two
 ---
 

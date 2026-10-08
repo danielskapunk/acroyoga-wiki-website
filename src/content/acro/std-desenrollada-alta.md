@@ -4,7 +4,7 @@ aka: [standing couch roll drop, desenrollada alta]
 level: easy
 image: './images/std-couch.jpg'
 video: https://www.youtube.com/watch?v=KuCPwI0GfNQ&t=55s
-to: []
+transitions: []
 tags: [move]
 numPeople: two
 ---

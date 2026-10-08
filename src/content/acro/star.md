@@ -5,31 +5,33 @@ aka: [estrellita]
 level: easy
 image: './images/acroyoga-star.jpeg'
 tags: []
-to:
-  - pose: Back Bird
-    slug: back-bird
-    video: 'https://youtu.be/BW0e3TwUd3U?t=17'
+transitions:
+  - name: back bird
+    pose: back-bird
+    direction: both
+    video: https://youtu.be/BW0e3TwUd3U?t=17
 
-  - pose: Hand to Hand
-    slug: hand-to-hand
-    video: ''
+  - name: hand to hand
+    pose: std-hand-to-hand
+    direction: both
 
-  - pose: Bird
-    slug: bird
-    video: 'https://youtu.be/lw88JUFB2Ok'
+  - name: bird
+    pose: bird
+    direction: both
+    video: https://youtu.be/lw88JUFB2Ok
 
-  - pose: (pop) Reverse Bird
-    slug: reverse-bird
-    video: 'https://youtu.be/e3CKFIrGb_c?t=8'
+  - name: pop reverse bird
+    pose: reverse-bird
+    direction: out
+    video: https://youtu.be/e3CKFIrGb_c?t=8
 
-  - pose: Foot to Hand
-    slug: foot-to-hand
-    video: ''
+  - name: foot to hand
+    pose: foot-to-hand
+    direction: both
 
-  - pose: Inside Side Star
-    slug: inside-side-star
-    video: ''
-
+  - name: inside side star
+    pose: inside-side-star
+    direction: both
 numPeople: two
 ---
 

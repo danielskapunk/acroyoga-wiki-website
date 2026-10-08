@@ -1,15 +1,15 @@
 ---
 name: Std Shoulder stand
+shortName: shoulder stand
 aka: []
 level: easy
 image: './images/acroyoga-shoulder-stand.jpeg'
 video: ''
 tags: [standing]
-to:
-  - pose: Standing
-    slug: ''
-    video: ''
-
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
 numPeople: two
 ---
 

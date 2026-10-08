@@ -5,11 +5,11 @@ level: easy
 image: './images/back-lever-on-thighs.jpeg'
 video: 'https://youtu.be/6gTdwKPJGls?t=179'
 tags: [standing, dance-lifts, counterbalance]
-to:
-  - pose: Standing
-    slug: ''
-    video: 'https://youtu.be/6gTdwKPJGls?t=179'
-
+transitions:
+  - name: standing
+    pose: standing
+    direction: both
+    video: https://youtu.be/6gTdwKPJGls?t=179
 numPeople: two
 ---
 

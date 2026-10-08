@@ -3,7 +3,7 @@ name: split lift to handstand dismount
 aka: []
 level: easy
 image: './images/split-lift.png'
-to: []
+transitions: []
 tags: [move]
 numPeople: two
 ---

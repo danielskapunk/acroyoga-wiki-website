@@ -1,21 +1,41 @@
 ---
 name: Two High
+shortName: two high
 aka: [doble altura]
 level: easy
 image: './images/std-two-high.jpg'
 tags: []
-to:
-  - pose: (step up / chinito) standing
-  - pose: (back of the knee jump) standing
-    video: 'https://youtu.be/VodvHIuV-8o?t=186'
-  - pose: (inlocate) standing
-  - pose: (jump up arms blocked) standing
-  - pose: (no hands back walk)
-    video: https://www.youtube.com/watch?v=VodvHIuV-8o&t=138s
-  - pose: (table pop) table
-  - pose: (cannonball drop) cannonball craddle
-    video: https://www.instagram.com/p/BlKGTgZnrQU
+transitions:
+  - name: step up / chinito standing
+    pose: standing
+    direction: out
 
+  - name: back of the knee jump standing
+    pose: standing
+    direction: out
+    video: https://youtu.be/VodvHIuV-8o?t=186
+
+  - name: inlocate standing
+    pose: standing
+    direction: in
+
+  - name: jump up arms blocked standing
+    pose: standing
+    direction: out
+
+  - name: no hands back walk
+    pose: standing
+    direction: out
+    video: https://www.youtube.com/watch?v=VodvHIuV-8o&t=138s
+
+  - name: table pop
+    pose: table
+    direction: out
+
+  - name: cannonball drop cannonball craddle
+    pose: cannonball-craddle
+    direction: out
+    video: https://www.instagram.com/p/BlKGTgZnrQU
 numPeople: two
 ---
 
