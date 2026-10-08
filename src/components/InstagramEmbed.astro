@@ -1,0 +1,30 @@
+---
+import { getInstagramEmbed } from '../lib/instagram'
+
+interface Props {
+	url: string
+	title?: string
+}
+
+const { url, title = 'Video de Instagram' } = Astro.props
+const embed = getInstagramEmbed(url)
+const aspect = embed && embed.type === 'reel' ? 'aspect-[9/16]' : 'aspect-[4/5]'
+---
+
+{
+	embed && (
+		<div
+			class={`mx-auto my-3 w-full max-w-[360px] overflow-hidden rounded-xl border border-slate-700/50 bg-slate-900 shadow-md ${aspect}`}
+		>
+			<iframe
+				data-src={embed.embedUrl}
+				title={title}
+				class="h-full w-full border-0"
+				loading="lazy"
+				allowtransparency="true"
+				allow="encrypted-media"
+				scrolling="no"
+			/>
+		</div>
+	)
+}

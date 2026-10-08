@@ -1,6 +1,8 @@
 ---
 import { YouTube } from '@astro-community/astro-embed-youtube'
 import { Icon } from 'astro-icon/components'
+import InstagramEmbed from './InstagramEmbed.astro'
+import { getInstagramEmbed } from '../lib/instagram'
 import type { TransitionContext } from '../lib/transitions'
 import { parseYouTube } from '../lib/youtube'
 
@@ -37,6 +39,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 				const source = mode === 'in' ? pose : { label: current, href: null }
 				const dest = mode === 'in' ? { label: current, href: null } : pose
 				const yt = t.video ? parseYouTube(t.video) : null
+				const ig = !yt && t.video ? getInstagramEmbed(t.video) : null
 				const panelId = `${idPrefix}-${mode}-${i}`
 				return (
 					<Fragment>
@@ -73,7 +76,7 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 								<span class="min-w-0 break-words">{dest.label}</span>
 							)}
 
-							{yt ? (
+							{yt || ig ? (
 								<button
 									type="button"
 									data-video-toggle
@@ -100,14 +103,18 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 								<span class="block" />
 							)}
 						</li>
-						{yt && (
+						{(yt || ig) && (
 							<li class="col-span-full" id={panelId} hidden>
 								<div class="py-2">
-									<YouTube
-										class="mx-auto block h-auto max-h-96 w-auto"
-										id={yt.id}
-										params={yt.start ? `start=${yt.start}` : undefined}
-									/>
+									{yt ? (
+										<YouTube
+											class="mx-auto block h-auto max-h-96 w-auto"
+											id={yt.id}
+											params={yt.start ? `start=${yt.start}` : undefined}
+										/>
+									) : (
+										ig && <InstagramEmbed url={t.video!} />
+									)}
 								</div>
 							</li>
 						)}
@@ -123,20 +130,25 @@ const { title, mode, current, data, ctx, idPrefix } = Astro.props
 		btn.addEventListener('click', () => {
 			const panel = document.getElementById(btn.getAttribute('aria-controls') || '')
 			if (!panel) return
+			const opening = btn.getAttribute('aria-expanded') !== 'true'
+			btn.setAttribute('aria-expanded', String(opening))
+			panel.hidden = !opening
 			const lite = panel.querySelector('lite-youtube')
-			if (btn.getAttribute('aria-expanded') === 'true') {
-				btn.setAttribute('aria-expanded', 'false')
-				panel.hidden = true
+			if (opening) {
+				if (lite && !lite.classList.contains('lyt-activated')) {
+					;(lite as HTMLElement & { activate: () => void }).activate()
+				}
+				panel
+					.querySelectorAll('iframe[data-src]')
+					.forEach((frame) => frame.setAttribute('src', frame.dataset.src))
+			} else {
 				if (lite) {
 					lite.querySelectorAll('iframe, div').forEach((el) => el.remove())
 					lite.classList.remove('lyt-activated')
 				}
-			} else {
-				panel.hidden = false
-				btn.setAttribute('aria-expanded', 'true')
-				if (lite && !lite.classList.contains('lyt-activated')) {
-					;(lite as HTMLElement & { activate: () => void }).activate()
-				}
+				panel
+					.querySelectorAll('iframe[data-src]')
+					.forEach((frame) => frame.setAttribute('src', 'about:blank'))
 			}
 		})
 	})
