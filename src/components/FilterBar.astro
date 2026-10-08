@@ -1,0 +1,107 @@
+---
+const levels = [
+	{ value: 'easy', label: 'Fácil' },
+	{ value: 'medium', label: 'Medio' },
+	{ value: 'hard', label: 'Difícil' }
+]
+const people = [
+	{ value: 'two', label: 'Dos' },
+	{ value: 'three', label: 'Tres' },
+	{ value: 'more', label: 'Más' }
+]
+---
+
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-2 pb-4">
+	<div class="flex items-center gap-2" role="group" aria-label="Filtrar por nivel">
+		<span class="text-xs uppercase tracking-wide text-zinc-500">Nivel</span>
+		{
+			levels.map((l) => (
+				<button
+					type="button"
+					class="filter-chip"
+					data-filter="level"
+					data-value={l.value}
+					aria-pressed="false"
+				>
+					{l.label}
+				</button>
+			))
+		}
+	</div>
+	<div class="flex items-center gap-2" role="group" aria-label="Filtrar por número de personas">
+		<span class="text-xs uppercase tracking-wide text-zinc-500">Personas</span>
+		{
+			people.map((p) => (
+				<button
+					type="button"
+					class="filter-chip"
+					data-filter="people"
+					data-value={p.value}
+					aria-pressed="false"
+				>
+					{p.label}
+				</button>
+			))
+		}
+	</div>
+</div>
+<p id="filter-empty" class="hidden pb-4 text-center text-sm text-zinc-400">Sin resultados</p>
+
+<style>
+	.filter-chip {
+		border: 1px solid rgb(100 116 139 / 0.6);
+		border-radius: 9999px;
+		background: rgb(39 39 42);
+		padding: 0.25rem 0.75rem;
+		font-size: 0.8rem;
+		line-height: 1.4;
+		color: rgb(212 212 216);
+		cursor: pointer;
+	}
+	.filter-chip:hover {
+		border-color: rgb(148 163 184);
+		color: white;
+	}
+	.filter-chip[aria-pressed='true'] {
+		border-color: rgb(var(--accent));
+		background: rgb(var(--accent));
+		color: white;
+	}
+</style>
+
+<script>
+	const chips = Array.from(document.querySelectorAll('.filter-chip'))
+	const items = Array.from(document.querySelectorAll('main article[data-level]'))
+	const empty = document.getElementById('filter-empty')
+
+	const selected = {
+		level: new Set<string>(),
+		people: new Set<string>()
+	}
+
+	function apply() {
+		let shown = 0
+		for (const el of items) {
+			const levelOk =
+				selected.level.size === 0 || selected.level.has(el.getAttribute('data-level') || '')
+			const peopleOk =
+				selected.people.size === 0 || selected.people.has(el.getAttribute('data-people') || '')
+			const visible = levelOk && peopleOk
+			el.style.display = visible ? '' : 'none'
+			if (visible) shown++
+		}
+		empty?.classList.toggle('hidden', shown > 0)
+	}
+
+	for (const chip of chips) {
+		chip.addEventListener('click', () => {
+			const group = chip.getAttribute('data-filter') === 'level' ? 'level' : 'people'
+			const value = chip.getAttribute('data-value') || ''
+			const on = chip.getAttribute('aria-pressed') === 'true'
+			chip.setAttribute('aria-pressed', String(!on))
+			if (on) selected[group].delete(value)
+			else selected[group].add(value)
+			apply()
+		})
+	}
+</script>

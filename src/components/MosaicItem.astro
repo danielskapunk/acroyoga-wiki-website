@@ -1,37 +1,28 @@
 ---
-import { Icon } from 'astro-icon/components'
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
-import { levelLabels, numPeopleShort } from '../lib/labels'
 interface Props {
 	title: string
 	img: ImageMetadata
-	level: string
-	numPeople: string
 	p: string
+	level: string
+	people: string
 }
 
-const { title, img, level, p, numPeople } = Astro.props
+const { title, img, p, level, people } = Astro.props
 ---
 
-<article class="m-0 grid grid-cols-2 grid-rows-[250px] items-center bg-zinc-900 pb-2 text-center">
+<article
+	class="m-0 grid grid-cols-2 grid-rows-[250px] items-center bg-zinc-900 pb-2 text-center"
+	data-level={level}
+	data-people={people}
+>
 	<h2 class="col-span-2 mb-0 pt-1">
 		<a class="!text-white" href={p}>{title}</a>
 	</h2>
 
 	<div class="order-first col-span-2">
 		<a href={p}><Image class="h-64 w-full object-cover" src={img} alt="imagen del truco" /></a>
-	</div>
-
-	<div class="wiki-item-level">
-		<span class="text-sm !text-gray-500">{levelLabels[level] ?? level}</span>
-	</div>
-
-	<div class="">
-		<span class="text-sm !text-gray-500">
-			<Icon name="fa:user" class="mr-1 inline h-3 w-3" />
-			{numPeopleShort[numPeople] ?? numPeople}
-		</span>
 	</div>
 </article>
 

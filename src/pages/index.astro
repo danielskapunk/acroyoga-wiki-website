@@ -1,6 +1,7 @@
 ---
 import Search from 'astro-pagefind/components/Search.astro'
 import { getCollection } from 'astro:content'
+import FilterBar from '../components/FilterBar.astro'
 import Mosaic from '../components/Mosaic.astro'
 import Layout from '../layouts/Layout.astro'
 const allAcro = await getCollection('acro')
@@ -14,6 +15,7 @@ allAcro.sort((a, b) => {
 
 <Layout title="Acroyoga Wiki">
 	<Search instance="search" className="pagefind-search grey px-2 py-4" />
+	<FilterBar />
 
 	<main>
 		<Mosaic items={allAcro} />

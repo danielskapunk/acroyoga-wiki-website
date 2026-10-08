@@ -11,10 +11,10 @@ const items = (Astro.props.items as CollectionEntry<'acro'>[]) || []
 		items.map((item) => (
 			<MosaicItem
 				title={item.data.name}
-				level={item.data.level}
 				p={`/acro/${item.id}`}
 				img={item.data.image}
-				numPeople={item.data.numPeople}
+				level={item.data.level}
+				people={item.data.numPeople}
 			/>
 		))
 	}
