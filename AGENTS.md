@@ -39,3 +39,4 @@ Order: edit → prettier → `npm run build`. `npm run build` failing on frontma
 - Prettier style (enforced via `.prettierrc`): tabs, single quotes, no semicolons, printWidth 100, Tailwind class sorting. Matches existing files — follow it.
 - UI copy is Spanish (Nombre, Transiciones, Variantes, Descripción); keep new UI strings Spanish.
 - npm with `package-lock.json` (use `npm ci` for clean installs); `engines.node` is `>=22.12.0` (Astro 7's floor), `.nvmrc` and CI pin 24.
+- Whenever you finish a multi-step task or long-running execution, run curl -s -d 'OpenCode task finished' [https://ntfy.sh/oc-finished](https://ntfy.sh/oc-finished) using your terminal tool as your final step.
