@@ -1,6 +1,8 @@
 ---
+import { YouTube } from '@astro-community/astro-embed-youtube'
 import { Icon } from 'astro-icon/components'
 import type { TransitionContext } from '../lib/transitions'
+import { parseYouTube } from '../lib/youtube'
 
 interface TransitionEntry {
 	name: string
@@ -17,9 +19,10 @@ interface Props {
 	current: string
 	data: TransitionEntry[]
 	ctx: TransitionContext
+	idPrefix: string
 }
 
-const { title, mode, current, data, ctx } = Astro.props
+const { title, mode, current, data, ctx, idPrefix } = Astro.props
 ---
 
 <section>
@@ -28,60 +31,113 @@ const { title, mode, current, data, ctx } = Astro.props
 		class="grid grid-cols-[minmax(0,auto)_24px_minmax(0,auto)_24px_minmax(0,1fr)_44px] items-center gap-x-1.5 gap-y-2 sm:grid-cols-[auto_60px_auto_60px_1fr_44px] sm:gap-x-2"
 	>
 		{
-			data.map((t) => {
+			data.map((t, i) => {
 				const pose = ctx.poseInfo(t.pose)
 				const transition = ctx.transitionInfo(t)
 				const source = mode === 'in' ? pose : { label: current, href: null }
 				const dest = mode === 'in' ? { label: current, href: null } : pose
+				const yt = t.video ? parseYouTube(t.video) : null
+				const panelId = `${idPrefix}-${mode}-${i}`
 				return (
-					<li class="contents">
-						{source.href ? (
-							<a href={source.href} class="min-w-0 break-words text-right">
-								{source.label}
-							</a>
-						) : (
-							<span class="min-w-0 break-words text-right">{source.label}</span>
+					<Fragment>
+						<li class="contents">
+							{source.href ? (
+								<a href={source.href} class="min-w-0 break-words text-right">
+									{source.label}
+								</a>
+							) : (
+								<span class="min-w-0 break-words text-right">{source.label}</span>
+							)}
+
+							<span class="flex justify-center text-gray-500" aria-hidden="true">
+								<Icon name="fa:chevron-right" class="h-3 w-auto" />
+							</span>
+
+							{transition.href ? (
+								<a href={transition.href} class="min-w-0 break-words text-center">
+									{transition.label}
+								</a>
+							) : (
+								<span class="min-w-0 break-words text-center">{transition.label}</span>
+							)}
+
+							<span class="flex justify-center text-gray-500" aria-hidden="true">
+								<Icon name="fa:chevron-right" class="h-3 w-auto" />
+							</span>
+
+							{dest.href ? (
+								<a href={dest.href} class="min-w-0 break-words">
+									{dest.label}
+								</a>
+							) : (
+								<span class="min-w-0 break-words">{dest.label}</span>
+							)}
+
+							{yt ? (
+								<button
+									type="button"
+									data-video-toggle
+									aria-expanded="false"
+									aria-controls={panelId}
+									class="flex h-7 w-7 cursor-pointer items-center justify-center rounded-md border border-gray-400/60 bg-transparent text-gray-400/60 hover:border-gray-500 hover:text-gray-500"
+									aria-label={`Video: ${transition.label}`}
+									title={transition.label}
+								>
+									<Icon name="fa:play" class="h-3 w-auto" />
+								</button>
+							) : t.video ? (
+								<a
+									href={t.video}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-400/60 bg-transparent text-gray-400/60 hover:border-gray-500 hover:text-gray-500"
+									aria-label={`Video: ${transition.label}`}
+									title={transition.label}
+								>
+									<Icon name="fa:play" class="h-3 w-auto" />
+								</a>
+							) : (
+								<span class="block" />
+							)}
+						</li>
+						{yt && (
+							<li class="col-span-full" id={panelId} hidden>
+								<div class="py-2">
+									<YouTube
+										class="mx-auto block h-auto max-h-96 w-auto"
+										id={yt.id}
+										params={yt.start ? `start=${yt.start}` : undefined}
+									/>
+								</div>
+							</li>
 						)}
-
-						<span class="flex justify-center text-gray-500" aria-hidden="true">
-							<Icon name="fa:chevron-right" class="h-3 w-auto" />
-						</span>
-
-						{transition.href ? (
-							<a href={transition.href} class="min-w-0 break-words text-center">
-								{transition.label}
-							</a>
-						) : (
-							<span class="min-w-0 break-words text-center">{transition.label}</span>
-						)}
-
-						<span class="flex justify-center text-gray-500" aria-hidden="true">
-							<Icon name="fa:chevron-right" class="h-3 w-auto" />
-						</span>
-
-						{dest.href ? (
-							<a href={dest.href} class="min-w-0 break-words">
-								{dest.label}
-							</a>
-						) : (
-							<span class="min-w-0 break-words">{dest.label}</span>
-						)}
-
-						{t.video ? (
-							<a
-								href={t.video}
-								class="flex h-7 w-7 items-center justify-center rounded-md border border-gray-400/60 bg-transparent text-gray-400/60 hover:border-gray-500 hover:text-gray-500"
-								aria-label={`Video: ${transition.label}`}
-								title={transition.label}
-							>
-								<Icon name="fa:play" class="h-3 w-auto" />
-							</a>
-						) : (
-							<span class="block" />
-						)}
-					</li>
+					</Fragment>
 				)
 			})
 		}
 	</ul>
 </section>
+
+<script>
+	document.querySelectorAll('[data-video-toggle]').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const panel = document.getElementById(btn.getAttribute('aria-controls') || '')
+			if (!panel) return
+			const lite = panel.querySelector('lite-youtube')
+			if (btn.getAttribute('aria-expanded') === 'true') {
+				btn.setAttribute('aria-expanded', 'false')
+				panel.hidden = true
+				if (lite) {
+					lite.querySelectorAll('iframe, div').forEach((el) => el.remove())
+					lite.classList.remove('lyt-activated')
+				}
+			} else {
+				panel.hidden = false
+				btn.setAttribute('aria-expanded', 'true')
+				if (lite && !lite.classList.contains('lyt-activated')) {
+					;(lite as HTMLElement & { activate: () => void }).activate()
+				}
+			}
+		})
+	})
+</script>
