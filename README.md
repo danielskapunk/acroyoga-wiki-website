@@ -48,11 +48,19 @@ There is no linter and no test runner: **`npm run build` is the verification ste
 
 **Vercel** — this checkout is linked to a Vercel project (`.vercel/`, gitignored), and `vercel.json` sets `cleanUrls: true`.
 
-- Dashboard: import the GitHub repo (build command `npm run build`, output directory `dist`).
-- Linked checkout: `npx vercel --prod`.
+### Build, check, deploy pre-built
+`npm run build` , `npm run preview`, test, `npx vercel --prebuilt`
+
+### Deploy to staging
+- this deploys to staging: `npx vercel`
+then can either upstage to prod via vercel web or cli npx vercel --prod
+- this deploys to prod: `npx vercel --prod`. (this deploys to production!)
+
+### about vercel.json cleanUrls:
 - `cleanUrls` matters because `build.format: 'file'` emits `dist/acro/bird.html` instead of `dist/acro/bird/index.html`.
 
-**Manual** — `npm run build`, then host `dist/` on any static host that serves `/acro/bird` from `bird.html` (otherwise add redirects or drop `build.format: 'file'`).
+## Manual to other server
+— `npm run build`, then host `dist/` on any static host that serves `/acro/bird` from `bird.html` (otherwise add redirects or drop `build.format: 'file'`).
 
 ## Repo layout
 

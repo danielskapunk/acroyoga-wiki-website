@@ -80,7 +80,7 @@ try {
 			/>
 
 			{
-				entry.data.video ? (
+				entry.data.video && (
 					<>
 						<h3>Video</h3>
 						<YouTube
@@ -89,8 +89,6 @@ try {
 							params={params}
 						/>
 					</>
-				) : (
-					<p>Sin video</p>
 				)
 			}
 
