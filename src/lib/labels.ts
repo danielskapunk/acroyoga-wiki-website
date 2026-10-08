@@ -15,3 +15,9 @@ export const numPeopleLabels: Record<string, string> = {
 	three: '3 personas',
 	more: '3+ personas'
 }
+
+export const numPeopleShort: Record<string, string> = {
+	two: '2',
+	three: '3',
+	more: '3+'
+}
