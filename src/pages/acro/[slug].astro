@@ -35,19 +35,18 @@ try {
 	let _s = url.searchParams.get('t') || url.searchParams.get('start') || ''
 	_s = _s?.replace('s', '')
 	params = _s ? `start=${_s}` : ''
-	console.log('start', params)
 } catch {}
 ---
 
 <Layout title={entry.data.name}>
 	<article class="bg-gray-300 pb-4">
-		<h1 class="text-center font-display text-3xl font-bold">{entry.data.name}</h1>
+		<h1 class="text-center font-display font-bold">{entry.data.name}</h1>
 
-		<Image class="h-96 w-full object-cover" src={entry.data.image} alt="trick image" />
+		<Image class="h-96 w-full object-cover" src={entry.data.image} alt="imagen del truco" />
 
 		<InfoSection data={entry} />
 
-		<section class="pl-4 pr-4">
+		<section class="space-y-4 px-4 sm:px-6">
 			{
 				into.length > 0 && (
 					<Transition
@@ -75,7 +74,7 @@ try {
 			<Image
 				class="mx-auto block h-auto max-h-96 w-auto"
 				src={entry.data.image}
-				alt="trick image"
+				alt="imagen del truco"
 			/>
 
 			{
@@ -89,7 +88,7 @@ try {
 						/>
 					</>
 				) : (
-					<section>No video</section>
+					<p>Sin video</p>
 				)
 			}
 
@@ -138,15 +137,5 @@ try {
 		height: 100%;
 		vertical-align: middle;
 		border-radius: 5px;
-	}
-	html h1,
-	html h2,
-	html h3,
-	html h4 {
-		font-size: x-large;
-		margin-bottom: 1rem;
-		padding-top: 1rem;
-		/* font-family: Montserrat; */
-		font-weight: 700;
 	}
 </style>
