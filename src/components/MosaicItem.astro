@@ -1,6 +1,8 @@
 ---
+import { Icon } from 'astro-icon/components'
 import type { ImageMetadata } from 'astro'
 import { Image } from 'astro:assets'
+import { levelLabels, levelColors, numPeopleLabels } from '../lib/labels'
 interface Props {
 	title: string
 	img: ImageMetadata
@@ -18,22 +20,18 @@ const { title, img, level, p, numPeople } = Astro.props
 	</h2>
 
 	<div class="order-first col-span-2">
-		<a href={p}><Image class="h-64 w-full object-cover" src={img} alt="test" /></a>
+		<a href={p}><Image class="h-64 w-full object-cover" src={img} alt="imagen del truco" /></a>
 	</div>
-	<!-- <div class="wiki-item-type">
-	  <a href={`${prefix}/${post.skill}`}>{post.skill}</a>
-	</div> -->
-	{/* <TagList class='tags2' prefix={''} tags={post.tags}></TagList> */}
+
 	<div class="wiki-item-level">
-		<a href={`/`} class="text-sm !text-gray-500">
-			{level}
-		</a>
+		<span class={`text-sm ${levelColors[level]}`}>{levelLabels[level] ?? level}</span>
 	</div>
 
 	<div class="">
-		<a href={`/`} class="text-sm !text-gray-500">
-			{numPeople}
-		</a>
+		<span class="text-sm !text-gray-500">
+			<Icon name="fa:user" class="mr-1 inline h-3 w-3" />
+			{numPeopleLabels[numPeople] ?? numPeople}
+		</span>
 	</div>
 </article>
 
