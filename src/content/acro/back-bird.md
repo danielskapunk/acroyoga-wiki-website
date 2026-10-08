@@ -7,7 +7,7 @@ image: './images/acro-back-bird.png'
 video: 'https://youtu.be/qa5iG6k3W0s'
 tags: []
 transitions:
-  - name: standing
+  - name: lean grabing elbows
     pose: standing
     direction: both
     video: https://youtu.be/qa5iG6k3W0s?t=36
@@ -31,7 +31,7 @@ transitions:
     direction: both
     video: https://www.youtube.com/watch?v=BW0e3TwUd3U&t=17s
 
-  - name: pop reverse bird
+  - name: pop
     pose: reverse-bird
     direction: out
     video: https://youtu.be/UekRYMSAfmQ?t=11

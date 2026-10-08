@@ -5,19 +5,19 @@ level: easy
 image: './images/acroyoga-shin-to-foot.jpeg'
 tags: []
 transitions:
-  - name: bird
+  - name: walk / pop
     pose: bird
     direction: both
 
-  - name: throne
+  - name: walk / pop
     pose: throne
     direction: both
 numPeople: two
 ---
 
-## Drills
+<!-- ## Drills
 
-[no video](https://www.youtube.com/)
+[no video](https://www.youtube.com/) -->
 
 ## Variantes
 

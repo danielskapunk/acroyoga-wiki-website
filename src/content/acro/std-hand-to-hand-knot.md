@@ -7,7 +7,7 @@ image: './images/std-knot.png'
 video: 'https://youtu.be/68fdEP5tacY?t=117'
 tags: []
 transitions:
-  - name: hand to hand
+  - name: pop
     pose: std-hand-to-hand
     direction: both
     video: https://youtu.be/68fdEP5tacY?t=117
